@@ -1,101 +1,74 @@
 ---
-
+import Card from "./Card.astro"
 ---
 
-<div class="max-w-screen-lg mx-auto pt-28">
-  <h1 class="text-3xl font-bold pl-8 pb-12">Korero Features (TODO: pick 6)</h1>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3">
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Get most out of hybrid workplaces</h2>
-        <p>
-          Hybrid workplaces are the new norm. However, all tools we use are
-          either created for in-person work or mimic processes common for
-          in-person work.
-        </p>
-      </div>
-    </div>
+<div class="max-w-screen-2xl mx-auto px-4 pt-28">
+  <h1 class="text-3xl font-bold pb-12">Korero Features</h1>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <Card title="Get most out of hybrid workplaces">
+      <p>
+        Hybrid workplaces are the new norm. However, all tools we use are
+        either created for in-person work or mimic processes common for
+        in-person work.
+      </p>
+    </Card>
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Enables efficient communication</h2>
-        <p>Efficient communication is asynchronous communication.</p>
-      </div>
-    </div>
+    <Card title="Enables efficient communication">
+      <p>Efficient communication is asynchronous communication.</p>
+    </Card>
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Improves the quality of meetings</h2>
-        <p>
-          Organizing meetings and making sure there are actionable follow-ups is
-          hard. Korero ...
-        </p>
-      </div>
-    </div>
+    <Card title="Improves the quality of meetings">
+      <p>
+        Organizing meetings and making sure there are actionable follow-ups is
+        hard. Korero ...
+      </p>
+    </Card>
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Fosters constructive discussions</h2>
-        <p>
-          Written communication is inherently less emotional and discussion
-          become more issue-driven and constructive.
-        </p>
-      </div>
-    </div>
+    <Card title="Fosters constructive discussions">
+      <p>
+        Written communication is inherently less emotional and discussion
+        become more issue-driven and constructive.
+      </p>
+    </Card>
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Automatic documentation for decisions</h2>
-        <p>
-          Any decision that was taken is automatically documented including who
-          took it and why it was taken. No longer need old issues be
-          re-discussed over and over again.
-        </p>
-      </div>
-    </div>
+    <Card title="Automatic documentation for decisions">
+      <p>
+        Any decision that was taken is automatically documented including who
+        took it and why it was taken. No longer need old issues be
+        re-discussed over and over again.
+      </p>
+    </Card>
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Stay organized</h2>
-        <p>
-          Conversations are organized by project or team. This helps you find
-          past conversations easily. Additionally, you can link related messages
-          for more context.
-        </p>
-      </div>
-    </div>
+    <Card title="Stay organized">
+      <p>
+        Conversations are organized by project or team. This helps you find
+        past conversations easily. Additionally, you can link related messages
+        for more context.
+      </p>
+    </Card>
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Reference and Context</h2>
+    <!-- <Card title="Reference and Context">
         <p>
           Conversations can be referenced to add context. Did you have a meeting
           that spawned a discussion? Reference the meeting from your discussion
           for added context and future documentation.
         </p>
-      </div>
-    </div>
+      </Card> -->
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">No lock-in -- your data</h2>
+    <!-- <Card title="No lock-in -- your data">
         <p>
           Conversations are stored in markdown documents. You can always
           download them and take them with you, wherever you go.
         </p>
-      </div>
-    </div>
+      </Card> -->
 
-    <div class="card bg-base-100 w-96 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Based on latest research</h2>
+    <!-- <Card title="Based on latest research">
         <p>
           Korero follows the latest research for optimal communication to
           maximize productivity, achieve good decisions, and foster healthy
           discourse.
         </p>
-      </div>
-    </div>
+      </Card> -->
   </div>
 </div>
 <style></style>

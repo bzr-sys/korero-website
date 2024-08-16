@@ -1,6 +1,6 @@
 ---
 import NavBarEnd from "./NavBarEnd.astro";
-import LogoTextSVG from "./LogoTextSVG.astro";
+import LogoIconSVG from "./LogoIconSVG.astro";
 ---
 
 <header class="sticky top-0 z-10">
@@ -25,16 +25,14 @@ import LogoTextSVG from "./LogoTextSVG.astro";
           tabindex="0"
           class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
         >
-          <li><a href="/benefits">Benefits</a></li>
           <li><a href="/pricing">Pricing</a></li>
         </ul>
       </div>
 
       <div class="ml-2 mr-4">
-        <a href="/"><LogoTextSVG width="115px" /></a>
+        <a href="/" class="router-link-active router-link-exact-active btn btn-ghost text-xl"><LogoIconSVG width="36px" /> Korero</a>
       </div>
       <ul class="menu menu-horizontal hidden px-1 py-0 lg:flex">
-        <li><a href="/benefits">Benefits</a></li>
         <li><a href="/pricing">Pricing</a></li>
       </ul>
     </div>
