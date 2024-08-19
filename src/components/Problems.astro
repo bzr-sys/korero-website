@@ -1,34 +1,53 @@
 ---
-import Card from "./Card.astro"
+import ProblemHeading from "./ProblemHeading.astro";
+import VideoCallSVGB from "./VideoCallSVGB.astro";
+import EmailSVG from "./EmailSVG.astro";
+import ChatSVG from "./ChatSVG.astro";
 ---
 
-<div class="max-w-screen-2xl mx-auto px-4">
-  <h1 class="text-3xl font-bold pb-12">Why Korero</h1>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <Card title="Endless unproductive zoom calls?">
+<div class="mx-auto max-w-screen-2xl px-12 pt-24">
+  <h1 class="sr-only">Why Korero</h1>
+  <div
+    class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
+  >
+    <div>
+      <div class="flex h-48 items-end">
+        <EmailSVG className="mx-auto max-h-full max-w-full" />
+      </div>
+      <ProblemHeading>Messy reply-all email discussions?</ProblemHeading>
       <p>
-        Tired of endless unproductive zoom calls? Korero improves the quality of meetings and more importantly, it allows you to replace meetings with actionable discussions.
+        Tired of confusing email threads? People added or removed randomly?
+        Important points lost in your crowded inbox? Korero keeps your
+        discussions organized and accessible, ensuring no detail gets
+        overlooked.
       </p>
-    </Card>
+    </div>
 
-    <Card title="Messy reply-all email discussions?">
+    <div>
+      <div class="flex h-48 items-end">
+        <VideoCallSVGB className="mx-auto max-h-full max-w-full" />
+      </div>
+      <ProblemHeading>Endless unproductive Zoom calls?</ProblemHeading>
       <p>
-        Having messy discussions in reply-all email threads? People get added
-        or removed from the sender list creating confusion? Discussion gets
-        lost in the see of other emails in your inbox? Korero keeps your
-        discussions organized.
+        Frustrated by time-wasting video meetings? Korero enhances meeting
+        quality and efficiency. Better yet, it often replaces meetings entirely
+        with focused, actionable discussions, saving you valuable time and
+        energy.
       </p>
-    </Card>
+    </div>
 
-    <Card title="Forgotten conversation in lost Slack tread?">
+    <div>
+      <div class="flex h-48 items-end">
+        <ChatSVG className="mx-auto max-h-full max-w-full" />
+      </div>
+      <ProblemHeading>Conversations lost in Slack treads?</ProblemHeading>
       <p>
-        Was your last issue lost in some Slack tread when the conversation
-        moved on? Is it hard to find the the conversation again for a follow
-        up? Are you jumping around your chat history after a late reply comes
-        in? With Korero, conversations are organized and where you expect them
-        to be.
+        Struggling to find past discussions in Slack? Important issues buried by
+        newer messages? Constantly scrolling through chat history? Korero
+        organizes your conversations logically, making follow-ups easy and
+        keeping discussions right where you need them.
       </p>
-    </Card>
+    </div>
 
     <!-- <Card title="Scattered meeting organization and follow-up?">
         <p>
