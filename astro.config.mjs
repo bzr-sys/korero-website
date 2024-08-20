@@ -6,5 +6,5 @@ export default defineConfig({
   integrations: [tailwind()],
 
   site: "https://bzr-sys.github.io",
-  // base: "korero-website",
+  base: "korero-website",
 });
