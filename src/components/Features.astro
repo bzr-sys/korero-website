@@ -1,73 +1,87 @@
 ---
 import Card from "./Card.astro";
+import Window from "./Window.astro";
+import AlternatingGrid from "./AlternatingGrid.astro";
+import Image from "astro/components/Image.astro";
+import pollScreenshot from "../images/poll-screenshot.png";
+import brainstormScreenshot from "../images/brainstorm-screenshot.png";
+import meetingScreenshot from "../images/meeting-screenshot.png";
+import discussionScreenshot from "../images/discussion-screenshot.png";
 ---
 
 <div class="mx-auto max-w-screen-2xl px-12 pt-28">
-  <h1 class="pb-12 text-3xl font-bold">Korero Features</h1>
-  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-    <Card title="Get most out of hybrid workplaces">
+  <h2 class="pb-12 text-3xl font-bold">
+    Korero <span class="text-accent">Features</span>
+  </h2>
+  <AlternatingGrid>
+    <Card title="Actionable discussions">
       <p>
-        Hybrid workplaces are the new norm. However, all tools we use are either
-        created for in-person work or mimic processes common for in-person work.
+        Foster meaningful conversations within relevant teams or projects.
+        Promote meritocracy and civil interactions while avoiding unnecessary
+        time waste. Link messages for context and document decision processes
+        for newcomers. Korero ensures your discussions are truly actionable.
       </p>
     </Card>
+    <Window>
+      <Image
+        src={discussionScreenshot}
+        width={discussionScreenshot.width / 2}
+        densities={[1.5, 2]}
+        alt="Screenshot of a Korero discussion"
+      />
+    </Window>
 
-    <Card title="Enables efficient communication">
-      <p>Efficient communication is asynchronous communication.</p>
-    </Card>
-
-    <Card title="Improves the quality of meetings">
+    <Card title="Efficient meetings">
       <p>
-        Organizing meetings and making sure there are actionable follow-ups is
-        hard. Korero ...
+        Elevate your meetings beyond simple conversations. Set clear agendas,
+        encourage preparation, share notes, and capture follow-ups. Korero wraps
+        synchronous exchanges in asynchronous communication, making your
+        meetings more productive and impactful.
       </p>
     </Card>
+    <Window>
+      <Image
+        src={meetingScreenshot}
+        width={meetingScreenshot.width / 2}
+        densities={[1.5, 2]}
+        alt="Screenshot of a Korero meeting"
+      />
+    </Window>
 
-    <Card title="Fosters constructive discussions">
+    <Card title="Insightful polls">
       <p>
-        Written communication is inherently less emotional and discussion become
-        more issue-driven and constructive.
+        Integrate polls seamlessly into your decision-making process. With
+        Korero, polls are placed directly within conversations, with results
+        updating in real-time. Give polls their rightful place in discussions,
+        enhancing their value and insights.
       </p>
     </Card>
+    <Window>
+      <Image
+        src={pollScreenshot}
+        width={pollScreenshot.width / 2}
+        densities={[1.5, 2]}
+        alt="Screenshot of a Korero poll"
+      />
+    </Window>
 
-    <Card title="Automatic documentation for decisions">
+    <Card title="Creative brainstorming">
       <p>
-        Any decision that was taken is automatically documented including who
-        took it and why it was taken. No longer need old issues be re-discussed
-        over and over again.
+        Avoid group-think with structured brainstorming. Start with individual
+        ideation, then share, discuss, and refine collectively. Korero supports
+        this process asynchronously, ensuring every brainstorming session
+        reaches its full creative potential.
       </p>
     </Card>
-
-    <Card title="Stay organized">
-      <p>
-        Conversations are organized by project or team. This helps you find past
-        conversations easily. Additionally, you can link related messages for
-        more context.
-      </p>
-    </Card>
-
-    <!-- <Card title="Reference and Context">
-        <p>
-          Conversations can be referenced to add context. Did you have a meeting
-          that spawned a discussion? Reference the meeting from your discussion
-          for added context and future documentation.
-        </p>
-      </Card> -->
-
-    <!-- <Card title="No lock-in -- your data">
-        <p>
-          Conversations are stored in markdown documents. You can always
-          download them and take them with you, wherever you go.
-        </p>
-      </Card> -->
-
-    <!-- <Card title="Based on latest research">
-        <p>
-          Korero follows the latest research for optimal communication to
-          maximize productivity, achieve good decisions, and foster healthy
-          discourse.
-        </p>
-      </Card> -->
-  </div>
+    <Window>
+      <Image
+        src={brainstormScreenshot}
+        width={brainstormScreenshot.width / 2}
+        densities={[1.5, 2]}
+        alt="Screenshot of a Korero brainstorm"
+      />
+    </Window>
+  </AlternatingGrid>
 </div>
+
 <style></style>
