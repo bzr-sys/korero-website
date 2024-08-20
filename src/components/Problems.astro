@@ -1,69 +1,55 @@
 ---
-
+import ProblemHeading from "./ProblemHeading.astro";
+import VideoCallSVG from "./VideoCallSVG.astro";
+import EmailSVG from "./EmailSVG.astro";
+import ChatSVG from "./ChatSVG.astro";
 ---
 
-<div class="max-w-screen-lg mx-auto pt-28">
-  <h1 class="text-3xl font-bold pl-8 pb-12">Why Korero? (TODO: pick 3)</h1>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3">
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title pb-8">Endless unproductive zoom calls?</h2>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
-        <p>
-          Tired of endless unproductive zoom calls? Korero improves the quality
-          of meetings and more importantly, it allows you to replace meetings
-          with actionable discussions.
-        </p>
+<div class="mx-auto max-w-screen-2xl px-12 pt-24">
+  <h2 class="sr-only">Why Korero</h2>
+  <div
+    class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
+  >
+    <div>
+      <div class="flex h-48 items-end">
+        <EmailSVG className="mx-auto max-h-full max-w-full" />
       </div>
+      <ProblemHeading>Messy reply-all email discussions?</ProblemHeading>
+      <p>
+        Tired of confusing email threads? People added or removed randomly?
+        Important points lost in your crowded inbox? Korero keeps your
+        discussions organized and accessible, ensuring no detail gets
+        overlooked.
+      </p>
     </div>
 
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title pb-8">Messy reply-all email discussions?</h2>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
-        <p>
-          Having messy discussions in reply-all email threads? People get added
-          or removed from the sender list creating confusion? Discussion gets
-          lost in the see of other emails in your inbox? Korero keeps your
-          discussions organized.
-        </p>
+    <div>
+      <div class="flex h-48 items-end">
+        <VideoCallSVG className="mx-auto max-h-full max-w-full" />
       </div>
+      <ProblemHeading>Endless unproductive Zoom calls?</ProblemHeading>
+      <p>
+        Frustrated by time-wasting video meetings? Korero enhances meeting
+        quality and efficiency. Better yet, it often replaces meetings entirely
+        with focused, actionable discussions, saving you valuable time and
+        energy.
+      </p>
     </div>
 
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title pb-8">
-          Forgotten conversation in lost Slack tread?
-        </h2>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
-        <p>
-          Was your last issue lost in some Slack tread when the conversation
-          moved on? Is it hard to find the the conversation again for a follow
-          up? Are you jumping around your chat history after a late reply comes
-          in? With Korero, conversations are organized and where you expect them
-          to be.
-        </p>
+    <div>
+      <div class="flex h-48 items-end">
+        <ChatSVG className="mx-auto max-h-full max-w-full" />
       </div>
+      <ProblemHeading>Conversations lost in Slack treads?</ProblemHeading>
+      <p>
+        Struggling to find past discussions in Slack? Important issues buried by
+        newer messages? Constantly scrolling through chat history? Korero
+        organizes your conversations logically, making follow-ups easy and
+        keeping discussions right where you need them.
+      </p>
     </div>
 
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title pb-8">
-          Scattered meeting organization and follow-up?
-        </h2>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
+    <!-- <Card title="Scattered meeting organization and follow-up?">
         <p>
           Is organizing and following up on meetings a scattered mess? Are you
           sending out agendas or collaboratively creating them in a common
@@ -71,16 +57,9 @@
           follow-up discussion in a chat room? Korero makes organizing meetings
           and follow-up discussions a breeze.
         </p>
-      </div>
-    </div>
+      </Card -->
 
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Does confidence win over competence?</h2>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
+    <!-- <Card title="Does confidence win over competence?">
         <p>
           Are discussed problem solutions picked by how charismatic, aggressive,
           or senior the suggesting person is instead of meritocracy? Does the
@@ -88,26 +67,16 @@
           never speak up in meetings? Asynchronous, written discussions are the
           cure.
         </p>
-      </div>
-    </div>
+      </Card> -->
 
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">
-          Re-visiting old discussions and running in circles?
-        </h2>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          class="max-w-sm rounded-lg shadow-2xl"
-        />
+    <!-- <Card title="Re-visiting old discussions and running in circles?">
         <p>
           Do you find yourself re-discussing old and half forgotten issues? New
           people join the team with ideas that were discussed before but nobody
           remembers why they were dismissed? With Korero, discussions become
           documentation and all decisions have attribution.
         </p>
-      </div>
-    </div>
+      </Card> -->
   </div>
 </div>
 <style></style>

@@ -1,0 +1,106 @@
+---
+import Card from "./Card.astro";
+import HybridWorkplaceIconSVG from "./HybridWorkplaceIconSVG.astro";
+import EffectiveCommunicationIconSVG from "./EffectiveCommunicationIconSVG.astro";
+import MeetingQualityIconSVG from "./MeetingQualityIconSVG.astro";
+import ConstructiveDiscussionsIconSVG from "./ConstructiveDiscussionsIconSVG.astro";
+import DocumentationIconSVG from "./DocumentationIconSVG.astro";
+import OrganizedIconSVG from "./OrganizedIconSVG.astro";
+---
+
+<div class="mx-auto max-w-screen-2xl px-12 pt-28">
+  <h2 class="pb-12 text-3xl font-bold">
+    Korero <span class="text-accent">Benefits</span>
+  </h2>
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <Card title="Optimizes hybrid workplaces">
+      <figure class="graph-paper-bg" slot="card-image">
+        <HybridWorkplaceIconSVG className="mx-auto w-28 py-8" />
+      </figure>
+      <p>
+        Hybrid work is the new norm, but most tools still mimic in-person
+        processes. Korero bridges this gap, offering solutions tailored for
+        distributed teams and flexible work arrangements.
+      </p>
+    </Card>
+
+    <Card title="Enables effective communication">
+      <figure class="graph-paper-bg" slot="card-image">
+        <EffectiveCommunicationIconSVG className="mx-auto w-28 py-8" />
+      </figure>
+      <p>
+        Korero champions asynchronous communication, allowing team members to
+        contribute at their own pace. This approach increases productivity and
+        accommodates diverse work schedules.
+      </p>
+    </Card>
+
+    <Card title="Enhances meeting quality">
+      <figure class="graph-paper-bg" slot="card-image">
+        <MeetingQualityIconSVG className="mx-auto w-28 py-8" />
+      </figure>
+      <p>
+        Organizing effective meetings with clear follow-ups is challenging.
+        Korero streamlines this process, ensuring meetings are purposeful and
+        result in actionable outcomes.
+      </p>
+    </Card>
+
+    <Card title="Fosters constructive discussions">
+      <figure class="graph-paper-bg" slot="card-image">
+        <ConstructiveDiscussionsIconSVG className="mx-auto w-28 py-8" />
+      </figure>
+      <p>
+        Written communication in Korero promotes more issue-driven, less
+        emotional exchanges. This leads to more constructive discussions and
+        better problem-solving.
+      </p>
+    </Card>
+
+    <Card title="Automates decision documentation">
+      <figure class="graph-paper-bg" slot="card-image">
+        <DocumentationIconSVG className="mx-auto w-28 py-8" />
+      </figure>
+      <p>
+        Korero automatically records decisions, including who made them and why.
+        This prevents rehashing old issues and provides a clear history for
+        future reference.
+      </p>
+    </Card>
+
+    <Card title="Keeps conversations organized">
+      <figure class="graph-paper-bg" slot="card-image">
+        <OrganizedIconSVG className="mx-auto w-28 py-8" />
+      </figure>
+      <p>
+        Discussions in Korero are neatly categorized by project or team. Find
+        past conversations easily and link related messages for additional
+        context, keeping everyone on the same page.
+      </p>
+    </Card>
+
+    <!-- <Card title="Reference and Context">
+        <p>
+          Conversations can be referenced to add context. Did you have a meeting
+          that spawned a discussion? Reference the meeting from your discussion
+          for added context and future documentation.
+        </p>
+      </Card> -->
+
+    <!-- <Card title="No lock-in -- your data">
+        <p>
+          Conversations are stored in markdown documents. You can always
+          download them and take them with you, wherever you go.
+        </p>
+      </Card> -->
+
+    <!-- <Card title="Based on latest research">
+        <p>
+          Korero follows the latest research for optimal communication to
+          maximize productivity, achieve good decisions, and foster healthy
+          discourse.
+        </p>
+      </Card> -->
+  </div>
+</div>
+<style></style>

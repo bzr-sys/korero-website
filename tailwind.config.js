@@ -49,13 +49,6 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: [
-      {
-        dark: {
-          ...require("daisyui/src/theming/themes")["night"],
-          primary: "#db9a59",
-        },
-      },
-    ],
+    themes: ["corporate"],
   },
 };
