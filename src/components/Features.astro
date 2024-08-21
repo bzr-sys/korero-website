@@ -1,7 +1,5 @@
 ---
-import Card from "./Card.astro";
-import Window from "./Window.astro";
-import AlternatingGrid from "./AlternatingGrid.astro";
+import ProblemHeading from "./ProblemHeading.astro";
 import Image from "astro/components/Image.astro";
 import pollScreenshot from "../images/poll-screenshot.png";
 import brainstormScreenshot from "../images/brainstorm-screenshot.png";
@@ -9,79 +7,168 @@ import meetingScreenshot from "../images/meeting-screenshot.png";
 import discussionScreenshot from "../images/discussion-screenshot.png";
 ---
 
-<div class="mx-auto max-w-screen-2xl px-12 pt-28">
+<div class="mx-auto max-w-screen-xl px-12 pt-28">
   <h2 class="pb-12 text-3xl font-bold">
     Korero <span class="text-accent">Features</span>
   </h2>
-  <AlternatingGrid>
-    <Card title="Actionable discussions">
-      <p>
-        Foster meaningful conversations within relevant teams or projects.
-        Promote meritocracy and civil interactions while avoiding unnecessary
-        time waste. Link messages for context and document decision processes
-        for newcomers. Korero ensures your discussions are truly actionable.
-      </p>
-    </Card>
-    <Window>
-      <Image
-        src={discussionScreenshot}
-        width={discussionScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero discussion"
-      />
-    </Window>
 
-    <Card title="Efficient meetings">
-      <p>
-        Elevate your meetings beyond simple conversations. Set clear agendas,
-        encourage preparation, share notes, and capture follow-ups. Korero wraps
-        synchronous exchanges in asynchronous communication, making your
-        meetings more productive and impactful.
-      </p>
-    </Card>
-    <Window>
-      <Image
-        src={meetingScreenshot}
-        width={meetingScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero meeting"
-      />
-    </Window>
+  <p class="max-w-3xl pb-16 text-2xl">
+    Transform the way your team communicates and collaborates. From facilitating
+    more productive meetings to fostering more insightful discussions, Korero
+    empowers you to work smarter, not harder.
+  </p>
 
-    <Card title="Insightful polls">
-      <p>
-        Integrate polls seamlessly into your decision-making process. With
-        Korero, polls are placed directly within conversations, with results
-        updating in real-time. Give polls their rightful place in discussions,
-        enhancing their value and insights.
-      </p>
-    </Card>
-    <Window>
-      <Image
-        src={pollScreenshot}
-        width={pollScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero poll"
-      />
-    </Window>
-
-    <Card title="Creative brainstorming">
-      <p>
-        Avoid group-think with structured brainstorming. Start with individual
-        ideation, then share, discuss, and refine collectively. Korero supports
-        this process asynchronously, ensuring every brainstorming session
-        reaches its full creative potential.
-      </p>
-    </Card>
-    <Window>
-      <Image
-        src={brainstormScreenshot}
-        width={brainstormScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero brainstorm"
-      />
-    </Window>
-  </AlternatingGrid>
+  <!-- new grid -->
+  <div
+    class="dotted-gradient relative mb-24 grid items-start gap-8 py-4 md:grid-cols-2"
+  >
+    <!-- first column -->
+    <div class="grid gap-8">
+      <!-- Actionable discussions -->
+      <div>
+        <div class="mt-24 overflow-hidden rounded bg-slate-50 shadow-xl">
+          <div
+            class="radial-gradient relative h-48 overflow-hidden bg-base-200 lg:h-72"
+          >
+            <figure class="absolute left-14 top-12 w-full">
+              <Image
+                class="rounded"
+                src={discussionScreenshot}
+                width={discussionScreenshot.width / 2}
+                densities={[1.5, 2]}
+                alt="Screenshot of a Korero discussion"
+              />
+            </figure>
+          </div>
+          <div class="px-8 pb-8">
+            <ProblemHeading>Actionable discussions</ProblemHeading>
+            <div class="text-lg">
+              <p>
+                Foster meaningful conversations within relevant teams or
+                projects. Promote meritocracy and civil interactions while
+                avoiding unnecessary time waste. Link messages for context and
+                document decision processes for newcomers. Korero ensures your
+                discussions are truly actionable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Efficient meetings -->
+      <div>
+        <div class="overflow-hidden rounded bg-slate-50 shadow-xl">
+          <div
+            class="radial-gradient relative h-48 overflow-hidden bg-base-200 lg:h-72"
+          >
+            <figure class="absolute left-14 top-12 w-full">
+              <Image
+                class="rounded"
+                src={meetingScreenshot}
+                width={meetingScreenshot.width / 2}
+                densities={[1.5, 2]}
+                alt="Screenshot of a Korero meeting"
+              />
+            </figure>
+          </div>
+          <div class="px-8 pb-8">
+            <ProblemHeading>Efficient meetings</ProblemHeading>
+            <div class="text-lg">
+              <p>
+                Elevate your meetings beyond simple conversations. Set clear
+                agendas, encourage preparation, share notes, and capture
+                follow-ups. Korero wraps synchronous exchanges in asynchronous
+                communication, making your meetings more productive and
+                impactful.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second column -->
+    <div class="grid gap-8">
+      <!-- Insightful polls -->
+      <div>
+        <div class="overflow-hidden rounded bg-slate-50 shadow-xl">
+          <div
+            class="radial-gradient relative h-48 overflow-hidden bg-base-200 lg:h-72"
+          >
+            <figure class="absolute left-14 top-12 w-full">
+              <Image
+                class="rounded"
+                src={pollScreenshot}
+                width={pollScreenshot.width / 2}
+                densities={[1.5, 2]}
+                alt="Screenshot of a Korero poll"
+              />
+            </figure>
+          </div>
+          <div class="px-8 pb-8">
+            <ProblemHeading>Insightful polls</ProblemHeading>
+            <div class="text-lg">
+              <p>
+                Integrate polls seamlessly into your decision-making process.
+                With Korero, polls are placed directly within conversations,
+                with results updating in real-time. Give polls their rightful
+                place in discussions, enhancing their value and insights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Creative brainstorming -->
+      <div>
+        <div class="overflow-hidden rounded bg-slate-50 shadow-xl">
+          <div
+            class="radial-gradient relative h-48 overflow-hidden bg-base-200 lg:h-72"
+          >
+            <figure class="absolute left-14 top-12 w-full">
+              <Image
+                class="rounded"
+                src={brainstormScreenshot}
+                width={brainstormScreenshot.width / 2}
+                densities={[1.5, 2]}
+                alt="Screenshot of a Korero brainstorm"
+              />
+            </figure>
+          </div>
+          <div class="px-8 pb-8">
+            <ProblemHeading>Creative brainstorming</ProblemHeading>
+            <div class="text-lg">
+              <p>
+                Avoid group-think with structured brainstorming. Start with
+                individual ideation, then share, discuss, and refine
+                collectively. Korero supports this process asynchronously,
+                ensuring every brainstorming session reaches its full creative
+                potential.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<style></style>
+<style>
+  /* A vertical, centered, dotted line */
+  .dotted-gradient {
+    --line-color: oklch(var(--b2) / 0.8);
+    background-image: linear-gradient(
+      to bottom,
+      transparent 40%,
+      var(--line-color) 41%
+    );
+    background-position: top;
+    background-size: 1px 10px;
+    background-repeat: repeat-y;
+  }
+
+  .radial-gradient {
+    background-image: radial-gradient(
+      circle at bottom right,
+      oklch(var(--a)),
+      transparent
+    );
+  }
+</style>
