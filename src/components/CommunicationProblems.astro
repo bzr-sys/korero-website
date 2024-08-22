@@ -1,0 +1,46 @@
+---
+import ProblemHeading from "./ProblemHeading.astro";
+import VideoCallSVG from "./VideoCallSVG.astro";
+import EmailSVG from "./EmailSVG.astro";
+import ChatSVG from "./ChatSVG.astro";
+---
+
+<div class="mx-auto max-w-screen-2xl px-12 pt-24">
+  <h2 class="sr-only">Why Effective Communication</h2>
+  <div
+    class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
+  >
+    <div>
+      <div class="flex h-48 items-end">
+        <EmailSVG className="mx-auto max-h-full max-w-full" />
+      </div>
+      <!-- <ProblemHeading>Not all communication is created equal</ProblemHeading>
+      <p>People don't know the difference between different tools/methods.</p> -->
+      <ProblemHeading>Communication efficiency matters</ProblemHeading>
+      <p>
+        We just communicated but never think about efficiency. Cost? Best use of
+        time? Future impact of our tool choice?
+      </p>
+    </div>
+
+    <div>
+      <div class="flex h-48 items-end">
+        <VideoCallSVG className="mx-auto max-h-full max-w-full" />
+      </div>
+      <ProblemHeading>Hybrid work environment is the new norm</ProblemHeading>
+      <p>Even harder to have effective communication</p>
+    </div>
+
+    <div>
+      <div class="flex h-48 items-end">
+        <ChatSVG className="mx-auto max-h-full max-w-full" />
+      </div>
+      <ProblemHeading>Many tools but no training</ProblemHeading>
+      <p>
+        Not all tools are created equal. Async vs sync, and so on. People don't
+        know the difference between different tools/methods.
+      </p>
+    </div>
+  </div>
+</div>
+<style></style>

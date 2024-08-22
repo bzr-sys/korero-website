@@ -7,4 +7,5 @@ export default defineConfig({
 
   site: "https://bzr-sys.github.io",
   base: "korero-website",
+  trailingSlash: "always",
 });
