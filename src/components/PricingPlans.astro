@@ -1,0 +1,72 @@
+---
+import ProblemHeading from "./ProblemHeading.astro";
+import VideoCallSVG from "./VideoCallSVG.astro";
+import EmailSVG from "./EmailSVG.astro";
+import ChatSVG from "./ChatSVG.astro";
+---
+
+<div class="mx-auto max-w-screen-2xl px-12 pt-24">
+  <h2 class="sr-only">Pricing Plans</h2>
+  <div
+    class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
+  >
+    <div class="card w-full bg-base-200 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Free</h2>
+        <h4>$0</h4>
+        <div class="card-actions">
+          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
+            Sign up for early access
+          </a>
+        </div>
+        <div>
+          <p class="font-bold">&nbsp</p>
+          <ul class="list-inside list-disc">
+            <li>100MB of application storage</li>
+            <li>100'000 API calls</li>
+            <li>Control over all your data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-full bg-base-200 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Pro</h2>
+        <h4>$5 per user</h4>
+        <div class="card-actions">
+          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
+            Sign up for early access
+          </a>
+        </div>
+        <div>
+          <ul class="list-inside list-disc">
+            <li>5GB of application storage</li>
+            <li>500'000 API calls</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-full bg-base-200 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Business</h2>
+        <h4>$15 per user/month</h4>
+        <div class="card-actions">
+          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
+            Sign up for early access
+          </a>
+        </div>
+        <div>
+          <ul class="list-inside list-disc">
+            <li>10GB of application storage</li>
+            <li>1M API calls</li>
+            <li>Create organizational teams</li>
+            <li>10GB of team application storage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style></style>
