@@ -1,71 +1,71 @@
 ---
-import ProblemHeading from "./ProblemHeading.astro";
-import VideoCallSVG from "./VideoCallSVG.astro";
-import EmailSVG from "./EmailSVG.astro";
-import ChatSVG from "./ChatSVG.astro";
+import Card from "./Card.astro";
+import SectionHeading from "./SectionHeading.astro";
 ---
 
 <div class="mx-auto max-w-screen-2xl px-12 pt-24">
-  <h2 class="sr-only">Pricing Plans</h2>
+  <div class="pb-12 text-center">
+    <h2 class="text-3xl font-bold">Pricing Plans</h2>
+    <p>Explore flexible pricing that scales with your needs.</p>
+  </div>
   <div
     class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
   >
-    <div class="card w-full bg-base-200 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Free</h2>
-        <h4>$0</h4>
-        <div class="card-actions">
-          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
-            Sign up for early access
-          </a>
+    <div class="card flex-col justify-between border p-4">
+      <div>
+        <div class="rounded bg-slate-100 p-6">
+          <h3 class="font-bold">Free</h3>
+          <div class="font-bold"><span class="text-5xl">$0</span> /month</div>
         </div>
-        <div>
-          <p class="font-bold">&nbsp</p>
-          <ul class="list-inside list-disc">
-            <li>100MB of application storage</li>
-            <li>100'000 API calls</li>
-            <li>Control over all your data</li>
-          </ul>
-        </div>
+        <ul class="list-inside list-disc px-4 py-8">
+          <li>100MB of application storage</li>
+          <li>100'000 API calls</li>
+          <li>Control over all your data</li>
+        </ul>
       </div>
+      <a
+        href="https://cloud.bzr.dev/login"
+        class="btn btn-outline btn-accent btn-block"
+      >
+        Sign up for early access
+      </a>
     </div>
 
-    <div class="card w-full bg-base-200 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Pro</h2>
-        <h4>$5 per user</h4>
-        <div class="card-actions">
-          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
-            Sign up for early access
-          </a>
+    <div class="card flex-col justify-between border p-4">
+      <div>
+        <div class="rounded bg-slate-100 p-6">
+          <h3 class="font-bold text-accent">Pro</h3>
+          <div class="font-bold"><span class="text-5xl">$5</span> /month</div>
         </div>
-        <div>
-          <ul class="list-inside list-disc">
-            <li>5GB of application storage</li>
-            <li>500'000 API calls</li>
-          </ul>
-        </div>
+        <ul class="list-inside list-disc px-4 py-8">
+          <li>5 GB of application storage</li>
+          <li>500,000 API calls</li>
+        </ul>
       </div>
+      <a href="https://cloud.bzr.dev/login" class="btn btn-accent btn-block">
+        Sign up for early access
+      </a>
     </div>
 
-    <div class="card w-full bg-base-200 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Business</h2>
-        <h4>$15 per user/month</h4>
-        <div class="card-actions">
-          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
-            Sign up for early access
-          </a>
+    <div class="card flex-col justify-between border p-4">
+      <div>
+        <div class="rounded bg-slate-100 p-6">
+          <h3 class="font-bold">Business</h3>
+          <div class="font-bold"><span class="text-5xl">$15</span> /month</div>
         </div>
-        <div>
-          <ul class="list-inside list-disc">
-            <li>10GB of application storage</li>
-            <li>1M API calls</li>
-            <li>Create organizational teams</li>
-            <li>10GB of team application storage</li>
-          </ul>
-        </div>
+        <ul class="list-inside list-disc px-4 py-8">
+          <li>10 GB of application storage</li>
+          <li>1M API calls</li>
+          <li>Create organizational teams</li>
+          <li>10 GB of team application storage</li>
+        </ul>
       </div>
+      <a
+        href="https://cloud.bzr.dev/login"
+        class="btn btn-outline btn-accent btn-block"
+      >
+        Sign up for early access
+      </a>
     </div>
   </div>
 </div>

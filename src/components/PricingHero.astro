@@ -1,35 +1,19 @@
 ---
-
+import Hero from "./Hero.astro";
 ---
 
-<div class="graph-paper-bg hero">
-  <div
-    class="hero-content max-w-2xl flex-col py-24 text-center lg:flex-row-reverse"
-  >
-    <div>
-      <div
-        class="bg-gradient-to-r from-slate-200/60 to-slate-200 to-50% bg-clip-text text-3xl font-extrabold [text-wrap:balance] md:text-4xl"
+<Hero>
+  <div>
+    <h2 class="text-3xl font-extrabold [text-wrap:balance] md:text-4xl">
+      Korero is a <span class="text-accent">Bazaar</span> app
+    </h2>
+
+    <p class="py-6">
+      Use Korero with your <a class="text-accent" href="https://bzr.dev/"
+        >Bazaar</a
+      > account and enjoy all the additional benefits Bazaar offers: <span
+        class="italic">privacy, transparency, and data ownership.</span
       >
-        <span
-          class="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]"
-        >
-          Korero is a
-        </span>
-        <span
-          class="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-accent md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]"
-        >
-          Bazaar App
-        </span>
-      </div>
-
-      <p class="py-6">
-        You can use Korero with your Bazaar account and enjoy all the additional
-        benefits Bazaar offers: <span class="italic"
-          >privacy, transparency, and data ownership.</span
-        >
-      </p>
-    </div>
+    </p>
   </div>
-</div>
-
-<style></style>
+</Hero>

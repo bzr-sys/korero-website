@@ -6,12 +6,14 @@ import MeetingQualityIconSVG from "./MeetingQualityIconSVG.astro";
 import ConstructiveDiscussionsIconSVG from "./ConstructiveDiscussionsIconSVG.astro";
 import DocumentationIconSVG from "./DocumentationIconSVG.astro";
 import OrganizedIconSVG from "./OrganizedIconSVG.astro";
+import SectionHeading from "./SectionHeading.astro";
+import "../styles/graph-paper-bg.css";
 ---
 
 <div class="mx-auto max-w-screen-2xl px-12 pt-28">
-  <h2 class="pb-12 text-3xl font-bold">
+  <SectionHeading>
     Korero <span class="text-accent">Benefits</span>
-  </h2>
+  </SectionHeading>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     <Card title="Optimizes hybrid workplaces">
       <figure class="graph-paper-bg" slot="card-image">
