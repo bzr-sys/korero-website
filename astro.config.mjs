@@ -5,7 +5,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
 
-  site: "https://bzr-sys.github.io",
-  base: "korero-website",
-  trailingSlash: "always",
+  site: "https://koreroapp.com",
 });
