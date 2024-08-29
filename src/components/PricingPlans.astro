@@ -1,46 +1,32 @@
 ---
-import Card from "./Card.astro";
-import SectionHeading from "./SectionHeading.astro";
+
 ---
 
-<div class="mx-auto max-w-screen-2xl px-12 pt-24">
+<div class="mx-auto max-w-5xl px-12 pt-24">
   <div class="pb-12 text-center">
     <h2 class="text-3xl font-bold">Pricing Plans</h2>
     <p>Explore flexible pricing that scales with your needs.</p>
   </div>
   <div
-    class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
+    class="grid justify-center gap-12 md:grid-cols-2 [&>div]:mb-12 [&>div]:max-w-[448px]"
   >
     <div class="card flex-col justify-between border p-4">
       <div>
         <div class="rounded bg-slate-100 p-6">
-          <h3 class="font-bold">Free</h3>
-          <div class="font-bold"><span class="text-5xl">$0</span> /month</div>
+          <h3 class="font-bold text-accent">Business</h3>
+          <div class="font-bold">
+            <span id="price" class="text-5xl"></span> /user per month
+          </div>
         </div>
         <ul class="list-inside list-disc px-4 py-8">
-          <li>100MB of application storage</li>
-          <li>100'000 API calls</li>
-          <li>Control over all your data</li>
+          <li><span id="app-storage"></span> of application storage</li>
+          <li><span id="api-call-limit"></span> API calls</li>
+          <li>Create organizational teams</li>
+          <li>
+            <span id="team-app-storage"></span> of team application storage
+          </li>
         </ul>
-      </div>
-      <a
-        href="https://cloud.bzr.dev/login"
-        class="btn btn-outline btn-accent btn-block"
-      >
-        Sign up for early access
-      </a>
-    </div>
-
-    <div class="card flex-col justify-between border p-4">
-      <div>
-        <div class="rounded bg-slate-100 p-6">
-          <h3 class="font-bold text-accent">Pro</h3>
-          <div class="font-bold"><span class="text-5xl">$5</span> /month</div>
-        </div>
-        <ul class="list-inside list-disc px-4 py-8">
-          <li>5 GB of application storage</li>
-          <li>500,000 API calls</li>
-        </ul>
+        <div id="business-range-wrapper" class="pb-8"></div>
       </div>
       <a href="https://cloud.bzr.dev/login" class="btn btn-accent btn-block">
         Sign up for early access
@@ -50,23 +36,116 @@ import SectionHeading from "./SectionHeading.astro";
     <div class="card flex-col justify-between border p-4">
       <div>
         <div class="rounded bg-slate-100 p-6">
-          <h3 class="font-bold">Business</h3>
-          <div class="font-bold"><span class="text-5xl">$15</span> /month</div>
+          <h3 class="font-bold">Enterprise</h3>
+          <div>
+            Talk to us for a comprehensive solution that meets all your
+            enterprise needs.
+          </div>
         </div>
         <ul class="list-inside list-disc px-4 py-8">
-          <li>10 GB of application storage</li>
-          <li>1M API calls</li>
-          <li>Create organizational teams</li>
-          <li>10 GB of team application storage</li>
+          <li>Custom application storage</li>
+          <li>Custom API call quota</li>
+          <li>Custom team application storage</li>
+          <li>Dedicated Support</li>
         </ul>
       </div>
-      <a
-        href="https://cloud.bzr.dev/login"
-        class="btn btn-outline btn-accent btn-block"
-      >
-        Sign up for early access
+      <a href="https://cloud.bzr.dev/login" class="btn btn-outline btn-block">
+        Talk to sales
       </a>
     </div>
   </div>
 </div>
-<style></style>
+
+<script>
+  (() => {
+    const businessDetails = [
+      {
+        appStorage: "10 GB",
+        teamAppStorage: "10 GB",
+        apiCallLimit: "1M",
+        price: "$15",
+      },
+      {
+        appStorage: "20 GB",
+        teamAppStorage: "20 GB",
+        apiCallLimit: "2M",
+        price: "$20",
+      },
+      {
+        appStorage: "50 GB",
+        teamAppStorage: "50 GB",
+        apiCallLimit: "3M",
+        price: "$25",
+      },
+      {
+        appStorage: "100 GB",
+        teamAppStorage: "100 GB",
+        apiCallLimit: "5M",
+        price: "$30",
+      },
+    ];
+
+    const defaultIndex = "0";
+
+    const rangeInput = document.createElement("input");
+    rangeInput.id = "business-range";
+    rangeInput.type = "range";
+    rangeInput.min = "0";
+    rangeInput.max = (businessDetails.length - 1).toString();
+    rangeInput.value = defaultIndex;
+    rangeInput.className = "range range-accent";
+    rangeInput.step = "0";
+
+    const rangeWrapperElement = document.getElementById(
+      "business-range-wrapper",
+    );
+
+    if (!rangeWrapperElement) return;
+    rangeWrapperElement.appendChild(rangeInput);
+
+    const rangeElement = document.getElementById("business-range");
+    if (!rangeElement) return;
+
+    rangeElement.addEventListener("input", (event) => {
+      const rangeElement = event.target as HTMLInputElement;
+      setBusinessDetails(rangeElement.value);
+    });
+
+    // Set default values
+    setBusinessDetails(defaultIndex);
+
+    function setBusinessDetails(index: string): void {
+      const appStorageElement = document.getElementById("app-storage");
+      const apiCallLimitElement = document.getElementById("api-call-limit");
+      const teamAppStorageElement = document.getElementById("team-app-storage");
+      const priceElement = document.getElementById("price");
+      if (
+        !appStorageElement ||
+        !apiCallLimitElement ||
+        !teamAppStorageElement ||
+        !priceElement
+      )
+        return;
+
+      const { appStorage, apiCallLimit, teamAppStorage, price } =
+        businessDetails[parseInt(index)];
+
+      appStorageElement.textContent = appStorage;
+      apiCallLimitElement.textContent = apiCallLimit;
+      teamAppStorageElement.textContent = teamAppStorage;
+      priceElement.textContent = price;
+    }
+
+    // Do range labels
+    const labelsDiv = document.createElement("div");
+    labelsDiv.className = "flex w-full justify-between px-2 text-xs";
+
+    businessDetails.forEach(({ appStorage }) => {
+      const span = document.createElement("span");
+      span.textContent = appStorage;
+      labelsDiv.appendChild(span);
+    });
+
+    rangeWrapperElement.appendChild(labelsDiv);
+  })();
+</script>
