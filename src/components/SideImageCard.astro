@@ -11,6 +11,7 @@ const { title, imageRight } = Astro.props;
 
 <Card
   title={title}
+  largeTitle={true}
   className={`[&>figure]:items-start ${imageRight ? `md:flex-row-reverse` : `md:flex-row`}`}
 >
   <figure

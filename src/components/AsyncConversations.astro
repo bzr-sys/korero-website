@@ -9,163 +9,167 @@ import EmotionsIconSVG from "./EmotionsIconSVG.astro";
 import DocumentationIconSVG from "./DocumentationIconSVG.astro";
 ---
 
-<div class="prose mx-auto px-4 pt-24">
-  <h2 class="text-3xl font-bold">
+<div class="mx-auto max-w-4xl px-4 pt-24">
+  <h2 class="pb-12 text-3xl font-bold">
     Asyncronous <span class="text-accent">Conversations</span>
   </h2>
 
   <div>
-    <p class="text-2xl">
+    <p class="max-w-3xl pb-12 text-2xl">
       When given the choice, we usually gravitate towards synchronous
       communication. We go over and talk to a colleague, post a message in a
       group chat, or schedule a meeting or call. Synchronous communication feels
       natural and convenient as we get (near) immediate responses to our
       prompts. Unfortunately, it is very ineffective.
     </p>
+    <div class="prose">
+      <p>
+        The alternative is asynchronous communication. We all use asynchronous
+        communication daily in the form of email. However, while email is good
+        for asynchronous communication, it is terrible to have an organized
+        conversation. For meaningful conversations in a work environment, where
+        we collaborate to solve a problem, asynchronous conversations are an
+        indispensable tool.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto grid gap-8 pt-10">
+    <SideImageCard title="Schedule autonomy">
+      <InterruptionIconSVG slot="card-image" />
+      <div>
+        <p>
+          Synchronous communication equals work interruptions. While they might
+          seem small, their impact is larger than expected. It usually takes 15
+          minutes to get back into a deep work state once you have been
+          interrupted. Also, interruptions add up as different people initiate
+          synchronous communication at different times of the day.
+        </p>
+        <p>
+          When we communicate asynchronously we do not impose your schedule on
+          others. We send out a message and allow the recipients to choose their
+          own time to read the message and respond. With asynchronous
+          communication we value everybody's autonomy over their own schedule.
+        </p>
+      </div>
+    </SideImageCard>
+    <SideImageCard title="Time efficiency" imageRight={true}>
+      <TimeEfficiencyIconSVG slot="card-image" />
+      <div>
+        <p>
+          Synchronous communication feels quick, it is however very time
+          inefficient. This discrepancy stems from our unawareness of the impact
+          our communication choices has on others. For example,
+        </p>
+        <ul class="list-disc">
+          <li>
+            Scheduling a one hour meeting with five people equals five hours of
+            productivity. If there is one person that did not really have to be
+            present, that is one hour lost. The 15 minutes to establish context
+            is actually another hour of productivity lost. It all adds up and is
+            compounded with all the people that are present.
+          </li>
+          <li>
+            Consuming written information is much faster than listening to
+            somebody talk in a meeting. We are just faster at reading than
+            speaking. In addition, when formulating an argument in written form
+            we have the time to make it concise and organized. This does take
+            some effort but efficiency gain is immense as all recipients safe
+            time.
+          </li>
+        </ul>
+      </div>
+    </SideImageCard>
+    <SideImageCard title="Organization">
+      <OrganizedIconSVG slot="card-image" />
+      <div>
+        <p>
+          We never think of organization when communicating. We schedule a
+          meeting with the agenda in an email. The meeting notes are then placed
+          in some document that everybody has access to. Then somebody starts a
+          discussion regarding some aspect in the notes in a chat room until it
+          gets out of hand and somebody decides to "organize" the discussion by
+          creating a "replay-all" email conversation. People get added and
+          removed from the email thread because it is email and eventually the
+          whole conversation gets buried in an overflowing inbox and is
+          eventually forgotten. This scenario is so common, most of us have
+          experienced it.
+        </p>
+        <p>
+          Needless to say, organization is key for effective communication.
+          Asynchronous communication is the only communication that can be
+          organized. Mind you, not all asynchronous communication is organized
+          (email is not organized), however, with the right tool it can be. The
+          same cannot be said about synchronous communication. Sync
+          communication is never organized and any attempts at organizing (slack
+          threads) is usually terrible. As such, the basis of any conversation
+          should be asynchronous.
+        </p>
+      </div>
+    </SideImageCard>
+    <SideImageCard title="Meritocracy" imageRight={true}>
+      <MeritIconSVG slot="card-image" />
+      <div>
+        <p>
+          In a conversation, each participant contributes with two aspects of
+          themselves: personality and skill. While we understand intellectually
+          that confidence is not equal competence, we are naturally drawn to
+          confidence and conflate quietness, shyness, and introversion with
+          incompetence.
+        </p>
+        <p>
+          As such, louder and more confident people usually dominate meetings.
+          This can hamper introverted and conflict avoiding personalities to be
+          ignored. In written communication they can shine and have the time
+          they need to formulate good arguments. They can contribute with their
+          skill despite a less imposing personality.
+        </p>
+      </div>
+    </SideImageCard>
+    <SideImageCard title="Emotionality">
+      <EmotionsIconSVG slot="card-image" />
+      <div>
+        <p>
+          Sometimes, discussion spark emotions. People start shouting and being
+          disrespectful. Asynchronous communication is not immune to emotional
+          outburst, the inherent delay between prompt and response, make it much
+          easier to be less reactive. One can pause, breathe, and try to
+          formulate a proper counter-argument. Thinking of arguments also
+          engages a different part of the brain which lowers emotionality
+          further. A respectful culture is still the basis of civil discourse
+          but asynchronous communication makes it so much easier.
+        </p>
+      </div>
+    </SideImageCard>
+    <SideImageCard title="Automatic documentation" imageRight={true}>
+      <DocumentationIconSVG slot="card-image" />
+      <div>
+        <p>
+          Properly organized asynchronous communication automatically becomes
+          documentation. Everybody can always go back and read why a certain
+          decision was taken or why a certain proposal was canceled. This avoids
+          re-discussing the same issues over and over with a few month in
+          between. When a new team member raises a proposal that was already
+          dismissed, it is easy to just point them to the discussion that lead
+          to the dismissal. On the flip-side, when circumstances do change,
+          re-visiting an old discussion and adding new arguments is trivial and
+          all the context is where it should be.
+        </p>
+      </div>
+    </SideImageCard>
+  </div>
+
+  <div class="prose pt-12">
+    <h3>Right tool for the job</h3>
     <p>
-      The alternative is asynchronous communication. We all use asynchronous
-      communication daily in the form of email. However, while email is good for
-      asynchronous communication, it is terrible to have an organized
-      conversation. For meaningful conversations in a work environment, where we
-      collaborate to solve a problem, asynchronous conversations are an
-      indispensable tool.
+      We usually don't think about the communication tool we choose.
+      Asynchronous communication is not the end-all be-all. You should be aware
+      of when to use what communication style or tool and combine them
+      effectively. Asynchronous communication should however always be the basis
+      or glue that holds a everything together, as it is the most organized and
+      can automatically document the whole journey of a discussion.
     </p>
   </div>
-</div>
-
-<div class="mx-auto grid max-w-4xl gap-4 px-4 pt-10">
-  <SideImageCard title="Schedule autonomy">
-    <InterruptionIconSVG slot="card-image" />
-    <div>
-      <p>
-        Synchronous communication equals work interruptions. While they might
-        seem small, their impact is larger than expected. It usually takes 15
-        minutes to get back into a deep work state once you have been
-        interrupted. Also, interruptions add up as different people initiate
-        synchronous communication at different times of the day.
-      </p>
-      <p>
-        When we communicate asynchronously we do not impose your schedule on
-        others. We send out a message and allow the recipients to choose their
-        own time to read the message and respond. With asynchronous
-        communication we value everybody's autonomy over their own schedule.
-      </p>
-    </div>
-  </SideImageCard>
-  <SideImageCard title="Time efficiency" imageRight={true}>
-    <TimeEfficiencyIconSVG slot="card-image" />
-    <div>
-      <p>
-        Synchronous communication feels quick, it is however very time
-        inefficient. This discrepancy stems from our unawareness of the impact
-        our communication choices has on others. For example,
-      </p>
-      <ul class="list-disc">
-        <li>
-          Scheduling a one hour meeting with five people equals five hours of
-          productivity. If there is one person that did not really have to be
-          present, that is one hour lost. The 15 minutes to establish context is
-          actually another hour of productivity lost. It all adds up and is
-          compounded with all the people that are present.
-        </li>
-        <li>
-          Consuming written information is much faster than listening to
-          somebody talk in a meeting. We are just faster at reading than
-          speaking. In addition, when formulating an argument in written form we
-          have the time to make it concise and organized. This does take some
-          effort but efficiency gain is immense as all recipients safe time.
-        </li>
-      </ul>
-    </div>
-  </SideImageCard>
-  <SideImageCard title="Organization">
-    <OrganizedIconSVG slot="card-image" />
-    <div>
-      <p>
-        We never think of organization when communicating. We schedule a meeting
-        with the agenda in an email. The meeting notes are then placed in some
-        document that everybody has access to. Then somebody starts a discussion
-        regarding some aspect in the notes in a chat room until it gets out of
-        hand and somebody decides to "organize" the discussion by creating a
-        "replay-all" email conversation. People get added and removed from the
-        email thread because it is email and eventually the whole conversation
-        gets buried in an overflowing inbox and is eventually forgotten. This
-        scenario is so common, most of us have experienced it.
-      </p>
-      <p>
-        Needless to say, organization is key for effective communication.
-        Asynchronous communication is the only communication that can be
-        organized. Mind you, not all asynchronous communication is organized
-        (email is not organized), however, with the right tool it can be. The
-        same cannot be said about synchronous communication. Sync communication
-        is never organized and any attempts at organizing (slack threads) is
-        usually terrible. As such, the basis of any conversation should be
-        asynchronous.
-      </p>
-    </div>
-  </SideImageCard>
-  <SideImageCard title="Meritocracy" imageRight={true}>
-    <MeritIconSVG slot="card-image" />
-    <div>
-      <p>
-        In a conversation, each participant contributes with two aspects of
-        themselves: personality and skill. While we understand intellectually
-        that confidence is not equal competence, we are naturally drawn to
-        confidence and conflate quietness, shyness, and introversion with
-        incompetence.
-      </p>
-      <p>
-        As such, louder and more confident people usually dominate meetings.
-        This can hamper introverted and conflict avoiding personalities to be
-        ignored. In written communication they can shine and have the time they
-        need to formulate good arguments. They can contribute with their skill
-        despite a less imposing personality.
-      </p>
-    </div>
-  </SideImageCard>
-  <SideImageCard title="Emotionality">
-    <EmotionsIconSVG slot="card-image" />
-    <div>
-      <p>
-        Sometimes, discussion spark emotions. People start shouting and being
-        disrespectful. Asynchronous communication is not immune to emotional
-        outburst, the inherent delay between prompt and response, make it much
-        easier to be less reactive. One can pause, breathe, and try to formulate
-        a proper counter-argument. Thinking of arguments also engages a
-        different part of the brain which lowers emotionality further. A
-        respectful culture is still the basis of civil discourse but
-        asynchronous communication makes it so much easier.
-      </p>
-    </div>
-  </SideImageCard>
-  <SideImageCard title="Automatic documentation" imageRight={true}>
-    <DocumentationIconSVG slot="card-image" />
-    <div>
-      <p>
-        Properly organized asynchronous communication automatically becomes
-        documentation. Everybody can always go back and read why a certain
-        decision was taken or why a certain proposal was canceled. This avoids
-        re-discussing the same issues over and over with a few month in between.
-        When a new team member raises a proposal that was already dismissed, it
-        is easy to just point them to the discussion that lead to the dismissal.
-        On the flip-side, when circumstances do change, re-visiting an old
-        discussion and adding new arguments is trivial and all the context is
-        where it should be.
-      </p>
-    </div>
-  </SideImageCard>
-</div>
-
-<div class="prose mx-auto px-4 py-12">
-  <h3>Right tool for the job</h3>
-  <p>
-    We usually don't think about the communication tool we choose. Asynchronous
-    communication is not the end-all be-all. You should be aware of when to use
-    what communication style or tool and combine them effectively. Asynchronous
-    communication should however always be the basis or glue that holds a
-    everything together, as it is the most organized and can automatically
-    document the whole journey of a discussion.
-  </p>
 </div>
 
 <style></style>
