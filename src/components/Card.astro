@@ -4,7 +4,7 @@ interface Props {
   className?: string;
 }
 
-const { title, className } = Astro.props;
+const { title, className = "" } = Astro.props;
 ---
 
 <div class={`card border bg-slate-50 border-slate-200 ${className}`}>

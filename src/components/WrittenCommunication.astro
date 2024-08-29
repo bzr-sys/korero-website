@@ -1,20 +1,19 @@
 ---
-import Card from "./Card.astro";
-import AlternatingGrid from "./AlternatingGrid.astro";
-import Image from "astro/components/Image.astro";
-import pollScreenshot from "../images/poll-screenshot.png";
-import brainstormScreenshot from "../images/brainstorm-screenshot.png";
-import meetingScreenshot from "../images/meeting-screenshot.png";
-import discussionScreenshot from "../images/discussion-screenshot.png";
 import SectionHeading from "./SectionHeading.astro";
+import SideImageCard from "./SideImageCard.astro";
+import HybridWorkplaceIconSVG from "./HybridWorkplaceIconSVG.astro";
+import BodyLanguageIconSVG from "./BodyLanguageIconSVG.astro";
+import PsychologicalSafetyIconSVG from "./PsychologicalSafetyIconSVG.astro";
+import ReferenceIconSVG from "./ReferenceIconSVG.astro";
+import DecisionMakingIconSVG from "./DecisionMakingIconSVG.astro";
 ---
 
-<div class="mx-auto max-w-screen-2xl px-12 pt-28">
+<div class="mx-auto max-w-4xl px-4 pt-28">
   <SectionHeading>
     Effective Written <span class="text-accent">Communication</span>
   </SectionHeading>
 
-  <p class="pb-12">
+  <p class="max-w-3xl pb-24 text-2xl">
     We learn to communicate very early in life. However, we hardly ever learn
     what makes communication effective. This is especially true for written
     communication. We learn to translate our words to script without thinking
@@ -22,152 +21,132 @@ import SectionHeading from "./SectionHeading.astro";
     communication actually looks like.
   </p>
 
-  <AlternatingGrid>
-    <div>
-      <Image
-        src={discussionScreenshot}
-        width={discussionScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero discussion"
-      />
-    </div>
-    <Card title="Missing non-verbal communication">
-      <p>
-        When we communicate face-to-face, the words we speak only contribute 7%
-        to the overall communication. 38% is vocal information and the remaining
-        55% is non-verbal body language. This means, when we write a message,
-        over 90% of the information we usually transmit is lost. This has many
-        consequences, such as the following:
-      </p>
-      <ul class="list-disc">
-        <li>
-          As Osmo Wiio said, “If communication can fail, it will. If a message
-          can be understood in different ways, it will be understood in just
-          that way which does the most harm.”
-        </li>
-        <li>
-          When you write, you usually imagine yourself saying the words. Do not
-          trust this inner voice (only you can hear it when writing). So avoid
-          sarcasm please.
-        </li>
-        <li>
-          Be overly polite (would you be so kind) and express deference (I would
-          love to hear you thoughts).
-        </li>
-        <li>
-          Relativize assertions (sometimes, possibly) and hedge your comments (I
-          think, ...).
-        </li>
-        <li>
-          Avoid public criticism whenever possible. If it is necessary, only
-          criticize the action and never the person and be specific ("you forgot
-          to turn off the light last friday after our lunchbreak" instead of
-          "you always forget to turn of the light").
-        </li>
-      </ul>
-    </Card>
+  <div class="grid gap-4">
+    <SideImageCard title="Missing non-verbal communication" imageRight={true}>
+      <BodyLanguageIconSVG slot="card-image" />
+      <div>
+        <p>
+          When we communicate face-to-face, the words we speak only contribute
+          7% to the overall communication. 38% is vocal information and the
+          remaining 55% is non-verbal body language. This means, when we write a
+          message, over 90% of the information we usually transmit is lost. This
+          has many consequences, such as the following:
+        </p>
+        <ul class="list-disc">
+          <li>
+            As Osmo Wiio said, “If communication can fail, it will. If a message
+            can be understood in different ways, it will be understood in just
+            that way which does the most harm.”
+          </li>
+          <li>
+            When you write, you usually imagine yourself saying the words. Do
+            not trust this inner voice (only you can hear it when writing). So
+            avoid sarcasm please.
+          </li>
+          <li>
+            Be overly polite (would you be so kind) and express deference (I
+            would love to hear you thoughts).
+          </li>
+          <li>
+            Relativize assertions (sometimes, possibly) and hedge your comments
+            (I think, ...).
+          </li>
+          <li>
+            Avoid public criticism whenever possible. If it is necessary, only
+            criticize the action and never the person and be specific ("you
+            forgot to turn off the light last friday after our lunchbreak"
+            instead of "you always forget to turn of the light").
+          </li>
+        </ul>
+      </div>
+    </SideImageCard>
 
-    <div>
-      <Image
-        src={meetingScreenshot}
-        width={meetingScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero meeting"
-      />
-    </div>
-    <Card title="Psychological safety">
-      <p>
-        Psychological safety is key to effective communication and a productive
-        work environment. The reason for this is simple: people will only voice
-        great ideas if they feel safe enough to also voice "stupid" ideas. This
-        is because we don't know if an idea is great or not before we put it out
-        in the world. More concretely, if people are afraid of being insulted
-        for what they say, if they fear their career will be affected for
-        voicing an opinion, or if they are afraid of being misunderstood (by
-        people that are quick to be triggered or offended), innovation and
-        productivity goes out the window.
-      </p>
-      <p>
-        The basis of psychological safety is a culture of respect. For
-        communication, especially written communication where all non-verbal
-        cues are lost, it goes further than just respect. Every person has to
-        make an active effort to assume the best possible interpretation of any
-        message. This takes empathy, a quality we should foster anyway.
-      </p>
-    </Card>
+    <SideImageCard title="Psychological safety">
+      <PsychologicalSafetyIconSVG slot="card-image" />
+      <div>
+        <p>
+          Psychological safety is key to effective communication and a
+          productive work environment. The reason for this is simple: people
+          will only voice great ideas if they feel safe enough to also voice
+          "stupid" ideas. This is because we don't know if an idea is great or
+          not before we put it out in the world. More concretely, if people are
+          afraid of being insulted for what they say, if they fear their career
+          will be affected for voicing an opinion, or if they are afraid of
+          being misunderstood (by people that are quick to be triggered or
+          offended), innovation and productivity goes out the window.
+        </p>
+        <p>
+          The basis of psychological safety is a culture of respect. For
+          communication, especially written communication where all non-verbal
+          cues are lost, it goes further than just respect. Every person has to
+          make an active effort to assume the best possible interpretation of
+          any message. This takes empathy, a quality we should foster anyway.
+        </p>
+      </div>
+    </SideImageCard>
 
-    <div>
-      <Image
-        src={brainstormScreenshot}
-        width={brainstormScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero brainstorm"
-      />
-    </div>
-    <Card title="Enable referencing">
-      <p>
-        We already mentioned how asynchronous communication enables good
-        organization. We can improve this by using or enabling references. On a
-        high level, this means we can reference other conversations or
-        individual messages for context. Ideally with a backlink to enrich the
-        referenced conversation.
-      </p>
-      <p>
-        On a per message level, we can also enable references by how we write
-        our message. For example, when we write a message with three arguments
-        we should create an enumerated list instead of three paragraphs. This
-        allows a reply to directly reference a number in the list. If we need
-        additional lists use letters or roman numerals to distinguish them.
-        Avoid simple bullet points. They look nice but cannot be referenced.
-      </p>
-    </Card>
+    <SideImageCard title="Enable referencing" imageRight={true}>
+      <ReferenceIconSVG slot="card-image" />
+      <div>
+        <p>
+          We already mentioned how asynchronous communication enables good
+          organization. We can improve this by using or enabling references. On
+          a high level, this means we can reference other conversations or
+          individual messages for context. Ideally with a backlink to enrich the
+          referenced conversation.
+        </p>
+        <p>
+          On a per message level, we can also enable references by how we write
+          our message. For example, when we write a message with three arguments
+          we should create an enumerated list instead of three paragraphs. This
+          allows a reply to directly reference a number in the list. If we need
+          additional lists use letters or roman numerals to distinguish them.
+          Avoid simple bullet points. They look nice but cannot be referenced.
+        </p>
+      </div>
+    </SideImageCard>
 
-    <div>
-      <Image
-        src={pollScreenshot}
-        width={pollScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero poll"
-      />
-    </div>
-    <Card title="Decision making">
-      <p>
-        The goal of many conversations is to reach a decision. Ideally, a good
-        or the best decision possible. Unfortunately, you and your team members
-        will likely disagree what the best decision is. To get to a good
-        decision in a civil and productive way do the following:
-      </p>
-      <ul class="list-disc">
-        <li>
-          When you voice your opinion or cast your vote, add a weight to the
-          vote, indicating how strongly you feel about a certain choice.
-        </li>
-        <li>
-          Reflect or articulate the nature of this decision. How easily can it
-          be reversed if we find out it was the wrong decision? Most decisions
-          are quite easily reversed which takes the weight off the decision and
-          allows us to decide quickly. If we find ourselves before a decision
-          that can only be undone with difficulty, make sure you really explored
-          all the avenues and arguments.
-        </li>
-        <li>
-          Understand the different methods of reaching a decision such as
-          consensus, compromise, majority-vote, or decree by the leader. We
-          idolize methods such as consensus and compromise but they don't
-          usually get good results. Majority-vote can be good and is useful to
-          see the support for different decisions. However, in an organization
-          there is usually a person that is responsible for the outcome, i.e., a
-          person that owns the decision. That person should usually decide.
-        </li>
-        <li>
-          Following a decision it is important to commit to it and help make it
-          work, even if you do not agree with it (disagree and commit). This is
-          the most important part, it is what makes a bunch of co-workers a well
-          performing team.
-        </li>
-      </ul>
-    </Card>
-  </AlternatingGrid>
+    <SideImageCard title="Decision making">
+      <DecisionMakingIconSVG slot="card-image" />
+      <div>
+        <p>
+          The goal of many conversations is to reach a decision. Ideally, a good
+          or the best decision possible. Unfortunately, you and your team
+          members will likely disagree what the best decision is. To get to a
+          good decision in a civil and productive way do the following:
+        </p>
+        <ul class="list-disc">
+          <li>
+            When you voice your opinion or cast your vote, add a weight to the
+            vote, indicating how strongly you feel about a certain choice.
+          </li>
+          <li>
+            Reflect or articulate the nature of this decision. How easily can it
+            be reversed if we find out it was the wrong decision? Most decisions
+            are quite easily reversed which takes the weight off the decision
+            and allows us to decide quickly. If we find ourselves before a
+            decision that can only be undone with difficulty, make sure you
+            really explored all the avenues and arguments.
+          </li>
+          <li>
+            Understand the different methods of reaching a decision such as
+            consensus, compromise, majority-vote, or decree by the leader. We
+            idolize methods such as consensus and compromise but they don't
+            usually get good results. Majority-vote can be good and is useful to
+            see the support for different decisions. However, in an organization
+            there is usually a person that is responsible for the outcome, i.e.,
+            a person that owns the decision. That person should usually decide.
+          </li>
+          <li>
+            Following a decision it is important to commit to it and help make
+            it work, even if you do not agree with it (disagree and commit).
+            This is the most important part, it is what makes a bunch of
+            co-workers a well performing team.
+          </li>
+        </ul>
+      </div>
+    </SideImageCard>
+  </div>
 </div>
 
 <style></style>

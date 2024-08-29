@@ -1,45 +1,42 @@
 ---
-import Card from "./Card.astro";
-import AlternatingGrid from "./AlternatingGrid.astro";
-import Image from "astro/components/Image.astro";
-import pollScreenshot from "../images/poll-screenshot.png";
-import brainstormScreenshot from "../images/brainstorm-screenshot.png";
-import meetingScreenshot from "../images/meeting-screenshot.png";
-import discussionScreenshot from "../images/discussion-screenshot.png";
-import SectionHeading from "./SectionHeading.astro";
+import SideImageCard from "./SideImageCard.astro";
+import HybridWorkplaceIconSVG from "./HybridWorkplaceIconSVG.astro";
+import InterruptionIconSVG from "./InterruptionIconSVG.astro";
+import TimeEfficiencyIconSVG from "./TimeEfficiencyIconSVG.astro";
+import OrganizedIconSVG from "./OrganizedIconSVG.astro";
+import MeritIconSVG from "./MeritIconSVG.astro";
+import EmotionsIconSVG from "./EmotionsIconSVG.astro";
+import DocumentationIconSVG from "./DocumentationIconSVG.astro";
 ---
 
-<div class="mx-auto max-w-screen-2xl px-12 pt-28">
-  <SectionHeading>
+<div class="prose mx-auto px-4 pt-24">
+  <h2 class="text-3xl font-bold">
     Asyncronous <span class="text-accent">Conversations</span>
-  </SectionHeading>
+  </h2>
 
-  <p class="pb-6">
-    When given the choice, we usually gravitate towards synchronous
-    communication. We go over and talk to a colleague, post a message in a group
-    chat, or schedule a meeting or call. Synchronous communication feels natural
-    and convenient as we get (near) immediate responses to our prompts.
-    Unfortunately, it is very ineffective.
-  </p>
-  <p class="pb-12">
-    The alternative is asynchronous communication. We all use asynchronous
-    communication daily in the form of email. However, while email is good for
-    asynchronous communication, it is terrible to have an organized
-    conversation. For meaningful conversations in a work environment, where we
-    collaborate to solve a problem, asynchronous conversations are an
-    indispensable tool.
-  </p>
+  <div>
+    <p class="text-2xl">
+      When given the choice, we usually gravitate towards synchronous
+      communication. We go over and talk to a colleague, post a message in a
+      group chat, or schedule a meeting or call. Synchronous communication feels
+      natural and convenient as we get (near) immediate responses to our
+      prompts. Unfortunately, it is very ineffective.
+    </p>
+    <p>
+      The alternative is asynchronous communication. We all use asynchronous
+      communication daily in the form of email. However, while email is good for
+      asynchronous communication, it is terrible to have an organized
+      conversation. For meaningful conversations in a work environment, where we
+      collaborate to solve a problem, asynchronous conversations are an
+      indispensable tool.
+    </p>
+  </div>
+</div>
 
-  <AlternatingGrid>
+<div class="mx-auto grid max-w-4xl gap-4 px-4 pt-10">
+  <SideImageCard title="Schedule autonomy">
+    <InterruptionIconSVG slot="card-image" />
     <div>
-      <Image
-        src={discussionScreenshot}
-        width={discussionScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero discussion"
-      />
-    </div>
-    <Card title="Schedule autonomy">
       <p>
         Synchronous communication equals work interruptions. While they might
         seem small, their impact is larger than expected. It usually takes 15
@@ -53,17 +50,11 @@ import SectionHeading from "./SectionHeading.astro";
         own time to read the message and respond. With asynchronous
         communication we value everybody's autonomy over their own schedule.
       </p>
-    </Card>
-
-    <div>
-      <Image
-        src={meetingScreenshot}
-        width={meetingScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero meeting"
-      />
     </div>
-    <Card title="Time Efficiency">
+  </SideImageCard>
+  <SideImageCard title="Time efficiency" imageRight={true}>
+    <TimeEfficiencyIconSVG slot="card-image" />
+    <div>
       <p>
         Synchronous communication feels quick, it is however very time
         inefficient. This discrepancy stems from our unawareness of the impact
@@ -85,17 +76,11 @@ import SectionHeading from "./SectionHeading.astro";
           effort but efficiency gain is immense as all recipients safe time.
         </li>
       </ul>
-    </Card>
-
-    <div>
-      <Image
-        src={brainstormScreenshot}
-        width={brainstormScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero brainstorm"
-      />
     </div>
-    <Card title="Organization">
+  </SideImageCard>
+  <SideImageCard title="Organization">
+    <OrganizedIconSVG slot="card-image" />
+    <div>
       <p>
         We never think of organization when communicating. We schedule a meeting
         with the agenda in an email. The meeting notes are then placed in some
@@ -117,17 +102,11 @@ import SectionHeading from "./SectionHeading.astro";
         usually terrible. As such, the basis of any conversation should be
         asynchronous.
       </p>
-    </Card>
-
-    <div>
-      <Image
-        src={pollScreenshot}
-        width={pollScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero poll"
-      />
     </div>
-    <Card title="Meritocracy">
+  </SideImageCard>
+  <SideImageCard title="Meritocracy" imageRight={true}>
+    <MeritIconSVG slot="card-image" />
+    <div>
       <p>
         In a conversation, each participant contributes with two aspects of
         themselves: personality and skill. While we understand intellectually
@@ -142,17 +121,11 @@ import SectionHeading from "./SectionHeading.astro";
         need to formulate good arguments. They can contribute with their skill
         despite a less imposing personality.
       </p>
-    </Card>
-
-    <div>
-      <Image
-        src={brainstormScreenshot}
-        width={brainstormScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero brainstorm"
-      />
     </div>
-    <Card title="Emotionality">
+  </SideImageCard>
+  <SideImageCard title="Emotionality">
+    <EmotionsIconSVG slot="card-image" />
+    <div>
       <p>
         Sometimes, discussion spark emotions. People start shouting and being
         disrespectful. Asynchronous communication is not immune to emotional
@@ -163,17 +136,11 @@ import SectionHeading from "./SectionHeading.astro";
         respectful culture is still the basis of civil discourse but
         asynchronous communication makes it so much easier.
       </p>
-    </Card>
-
-    <div>
-      <Image
-        src={brainstormScreenshot}
-        width={brainstormScreenshot.width / 2}
-        densities={[1.5, 2]}
-        alt="Screenshot of a Korero brainstorm"
-      />
     </div>
-    <Card title="Automatic documentation">
+  </SideImageCard>
+  <SideImageCard title="Automatic documentation" imageRight={true}>
+    <DocumentationIconSVG slot="card-image" />
+    <div>
       <p>
         Properly organized asynchronous communication automatically becomes
         documentation. Everybody can always go back and read why a certain
@@ -185,11 +152,13 @@ import SectionHeading from "./SectionHeading.astro";
         discussion and adding new arguments is trivial and all the context is
         where it should be.
       </p>
-    </Card>
-  </AlternatingGrid>
+    </div>
+  </SideImageCard>
+</div>
 
-  <h3 class="pb-6 pt-12 font-bold">Right tool for the job</h3>
-  <p class="pb-12">
+<div class="prose mx-auto px-4 py-12">
+  <h3>Right tool for the job</h3>
+  <p>
     We usually don't think about the communication tool we choose. Asynchronous
     communication is not the end-all be-all. You should be aware of when to use
     what communication style or tool and combine them effectively. Asynchronous

@@ -1,0 +1,25 @@
+---
+import Card from "./Card.astro";
+
+interface Props {
+  title: string;
+  imageRight?: boolean;
+}
+
+const { title, imageRight } = Astro.props;
+---
+
+<Card
+  title={title}
+  className={`[&>figure]:items-start ${imageRight ? `md:flex-row-reverse` : `md:flex-row`}`}
+>
+  <figure
+    class="graph-paper-bg min-w-48 p-8 [&>svg]:max-w-28"
+    slot="card-image"
+  >
+    <slot name="card-image" />
+  </figure>
+  <div class="prose">
+    <slot />
+  </div>
+</Card>
