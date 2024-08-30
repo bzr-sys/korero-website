@@ -11,7 +11,7 @@
     class="grid justify-center gap-12 md:grid-cols-2 [&>div]:mb-12 [&>div]:max-w-[448px]"
   >
     <div class="card flex-col justify-between border p-4">
-      <div>
+      <div id="business-details" aria-live="polite">
         <div class="rounded bg-slate-100 p-6">
           <h3 class="font-bold text-accent">Business</h3>
           <div class="font-bold">
@@ -87,20 +87,28 @@
 
     const defaultIndex = "0";
 
+    const rangeWrapperElement = document.getElementById(
+      "business-range-wrapper",
+    );
+    if (!rangeWrapperElement) return;
+
+    // Range label
+    const rangeInputLabel = document.createElement("label");
+    rangeInputLabel.setAttribute("for", "business-range");
+    rangeInputLabel.className = "sr-only";
+    rangeInputLabel.textContent = "Select a Business plan tier";
+    rangeWrapperElement.appendChild(rangeInputLabel);
+
+    // Range input
     const rangeInput = document.createElement("input");
     rangeInput.id = "business-range";
+    rangeInput.setAttribute("aria-controls", "business-details");
     rangeInput.type = "range";
     rangeInput.min = "0";
     rangeInput.max = (businessDetails.length - 1).toString();
     rangeInput.value = defaultIndex;
     rangeInput.className = "range range-accent";
     rangeInput.step = "0";
-
-    const rangeWrapperElement = document.getElementById(
-      "business-range-wrapper",
-    );
-
-    if (!rangeWrapperElement) return;
     rangeWrapperElement.appendChild(rangeInput);
 
     const rangeElement = document.getElementById("business-range");
