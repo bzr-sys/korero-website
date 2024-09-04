@@ -1,0 +1,261 @@
+---
+
+---
+
+<div class="sib-form pt-12">
+  <div id="sib-form-container" class="sib-form-container">
+    {
+      /*
+      Added when form submitted with error:
+      - sib-form-message-panel--active
+    */
+    }
+    <div
+      id="error-message"
+      class="sib-form-message-panel alert alert-error mb-4"
+      role="alert"
+    >
+      <div
+        class="sib-form-message-panel__text sib-form-message-panel__text--center flex gap-4"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+        <span class="sib-form-message-panel__inner-text">
+          Oops, your early access sign-up could not be saved.
+        </span>
+      </div>
+    </div>
+    {
+      /*
+      Added when form submitted successfully:
+      - sib-form-message-panel--active
+    */
+    }
+    <div
+      id="success-message"
+      class="sib-form-message-panel alert alert-success mb-4"
+      role="alert"
+    >
+      <div
+        class="sib-form-message-panel__text sib-form-message-panel__text--center flex gap-4"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 shrink-0 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="sib-form-message-panel__inner-text">
+          You&#039;re on the Korero early access list!
+        </span>
+      </div>
+    </div>
+    <div
+      id="sib-container"
+      class="sib-container--large sib-container--vertical"
+    >
+      <form
+        id="sib-form"
+        method="POST"
+        action="https://fbe7d876.sibforms.com/serve/MUIFAH0hPtRKjx-C2zA8VDYoVSX5fZWlAHYHCSGNJvwOMtFiM0V2OGuJfcCtQ-EzZzaVeQrtxvTAqnsyIGCZymdd-6ThjwtCWz9EhEYhEgf-tFc8Vk7Yxmx-jMc29GP6HpcvC4dEsED95eij8Tiv8o_CaLC000CIuXYiqUvjSpeb56rOidQiOp4Rm561NCOnQbuM7xGTFhjKfiPk"
+        data-type="subscription"
+      >
+        <div>
+          <div class="sib-input sib-form-block form-control pb-4">
+            <div class="form__entry entry_block">
+              <div
+                role="alert"
+                class="entry__error entry__error--primary text-error"
+              >
+              </div>
+              <div class="form__label-row">
+                <label
+                  class="entry__label sr-only"
+                  for="EMAIL"
+                  data-required="*">Enter your email address to subscribe</label
+                >
+
+                <div class="entry__field">
+                  <input
+                    class="input input-lg input-bordered w-full"
+                    type="email"
+                    id="EMAIL"
+                    name="EMAIL"
+                    autocomplete="off"
+                    placeholder="Email address"
+                    data-required="true"
+                    required
+                  />
+                  <div class="label">
+                    <div class="label-text-alt">
+                      This site is protected by reCAPTCHA and the Google
+                      <a href="https://policies.google.com/privacy"
+                        >Privacy Policy</a
+                      > and
+                      <a href="https://policies.google.com/terms"
+                        >Terms of Service</a
+                      > apply.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row">
+                <div class="entry__field">
+                  {/* Value set by plan link click */}
+                  <input
+                    class="input"
+                    type="hidden"
+                    id="PLAN"
+                    name="PLAN"
+                    value="unspecified"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="g-recaptcha-v3"
+            data-sitekey="6LfGuzIqAAAAAL0ZeCkpAJfH9WTvREo7e3JGdGA4"
+            style="display: none"
+          >
+          </div>
+        </div>
+        <div>
+          <div class="sib-form-block">
+            {
+              /*
+              When submit button is clicked:
+              - added: sib-form-block__button-disabled
+              - added: disabled="true"
+            */
+            }
+            <button
+              class="sib-form-block__button sib-form-block__button-with-loader btn btn-accent btn-lg btn-block"
+              form="sib-form"
+              type="submit"
+            >
+              {
+                /*
+                When submit button is clicked:
+                - removed: sib-hide-loader-icon
+              */
+              }
+              <svg
+                class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"
+                ></path>
+              </svg>
+              Get early access
+            </button>
+          </div>
+        </div>
+
+        <input
+          type="text"
+          name="email_address_check"
+          value=""
+          class="input--hidden"
+        />
+        <input type="hidden" name="locale" value="en" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  declare global {
+    interface Window {
+      REQUIRED_ERROR_MESSAGE: string;
+    }
+  }
+  window.REQUIRED_ERROR_MESSAGE = "Email address cannot be left blank. ";
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<script
+  src="https://www.google.com/recaptcha/api.js?render=6LfGuzIqAAAAAL0ZeCkpAJfH9WTvREo7e3JGdGA4&hl=en"
+  async
+  defer></script>
+
+{
+  /*
+  Styles copied and pasted from here, then modified
+  <link
+    rel="stylesheet"
+    href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+  /> 
+  */
+}
+<style is:global>
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
+  .sib-form-message-panel {
+    display: none;
+  }
+  .sib-form-message-panel--active {
+    display: block;
+  }
+  .sib-hide-loader-icon {
+    display: none;
+  }
+  .sib-form .clickable__icon {
+    height: 1.5rem;
+    vertical-align: bottom;
+    width: 1.5rem;
+  }
+  .sib-form .progress-indicator__icon {
+    -webkit-animation: indicator-spin 1.3s cubic-bezier(0.46, 0.35, 0.39, 0.85)
+      infinite;
+    animation: indicator-spin 1.3s cubic-bezier(0.46, 0.35, 0.39, 0.85) infinite;
+  }
+  @-webkit-keyframes indicator-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn);
+    }
+  }
+  @keyframes indicator-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn);
+    }
+  }
+</style>

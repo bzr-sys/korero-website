@@ -1,16 +1,17 @@
 ---
 interface Props {
   title: string;
+  largeTitle?: boolean;
   className?: string;
 }
 
-const { title, className } = Astro.props;
+const { title, largeTitle, className = "" } = Astro.props;
 ---
 
 <div class={`card border bg-slate-50 border-slate-200 ${className}`}>
   <slot name="card-image" />
   <div class="card-body">
-    <h2 class="card-title">{title}</h2>
+    <h2 class={`card-title ${largeTitle && "text-2xl"}`}>{title}</h2>
     <slot />
   </div>
 </div>

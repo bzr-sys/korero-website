@@ -1,72 +1,78 @@
 ---
-import ProblemHeading from "./ProblemHeading.astro";
-import VideoCallSVG from "./VideoCallSVG.astro";
-import EmailSVG from "./EmailSVG.astro";
-import ChatSVG from "./ChatSVG.astro";
+import BusinessPlan from "./BusinessPlan.astro";
 ---
 
-<div class="mx-auto max-w-screen-2xl px-12 pt-24">
-  <h2 class="sr-only">Pricing Plans</h2>
-  <div
-    class="grid justify-center gap-12 md:grid-cols-3 [&>div]:mb-12 [&>div]:max-w-[448px]"
-  >
-    <div class="card w-full bg-base-200 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Free</h2>
-        <h4>$0</h4>
-        <div class="card-actions">
-          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
-            Sign up for early access
-          </a>
-        </div>
-        <div>
-          <p class="font-bold">&nbsp</p>
-          <ul class="list-inside list-disc">
-            <li>100MB of application storage</li>
-            <li>100'000 API calls</li>
-            <li>Control over all your data</li>
-          </ul>
-        </div>
-      </div>
+<div class="mx-auto max-w-5xl px-4 pt-24">
+  <div class="pb-12 text-center">
+    <h2 class="text-3xl font-bold">Pricing Plans</h2>
+    <p>Explore flexible pricing that scales with your needs.</p>
+  </div>
+  <div class="grid justify-center gap-12 md:grid-cols-2 [&>div]:max-w-[448px]">
+    <div class="card flex-col justify-between border p-4">
+      <BusinessPlan />
+      <a
+        href="#early-access"
+        id="sign-up-business"
+        class="btn btn-accent btn-block"
+        data-plan="business"
+      >
+        Sign up for early access
+      </a>
     </div>
 
-    <div class="card w-full bg-base-200 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Pro</h2>
-        <h4>$5 per user</h4>
-        <div class="card-actions">
-          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
-            Sign up for early access
-          </a>
+    <div class="card flex-col justify-between border p-4">
+      <div>
+        <div class="rounded bg-slate-100 p-6">
+          <h3 class="font-bold">Enterprise</h3>
+          <div>
+            Talk to us for a comprehensive solution that meets all your
+            enterprise needs.
+          </div>
         </div>
-        <div>
-          <ul class="list-inside list-disc">
-            <li>5GB of application storage</li>
-            <li>500'000 API calls</li>
-          </ul>
-        </div>
+        <ul class="list-inside list-disc px-4 py-8">
+          <li>Custom application storage</li>
+          <li>Custom API call quota</li>
+          <li>Custom team application storage</li>
+          <li>Dedicated Support</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="card w-full bg-base-200 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">Business</h2>
-        <h4>$15 per user/month</h4>
-        <div class="card-actions">
-          <a href="https://cloud.bzr.dev/login" class="btn btn-primary">
-            Sign up for early access
-          </a>
-        </div>
-        <div>
-          <ul class="list-inside list-disc">
-            <li>10GB of application storage</li>
-            <li>1M API calls</li>
-            <li>Create organizational teams</li>
-            <li>10GB of team application storage</li>
-          </ul>
-        </div>
-      </div>
+      <a
+        href="#early-access"
+        id="sign-up-enterprise"
+        class="btn btn-outline btn-block"
+        data-plan="enterprise"
+      >
+        Talk to sales
+      </a>
     </div>
   </div>
+
+  <div class="py-6 text-center text-sm opacity-70">
+    <a href="#early-access" id="sign-up-free" class="link" data-plan="free"
+      >Or, try Korero with free Bazaar account.</a
+    >
+  </div>
 </div>
-<style></style>
+
+<script>
+  (() => {
+    const planInput = document.getElementById("PLAN") as HTMLInputElement;
+    if (!planInput) return;
+
+    /**
+     * Link element must have a `data-plan` attribute
+     * @param linkId e.g. `sign-up-business`
+     */
+    function addLinkClickEventToSetPlanValue(linkId: string): void {
+      const link = document.getElementById(linkId);
+      if (link) {
+        link.addEventListener("click", () => {
+          planInput.value = link.dataset.plan || "";
+        });
+      }
+    }
+    addLinkClickEventToSetPlanValue("sign-up-business");
+    addLinkClickEventToSetPlanValue("sign-up-enterprise");
+    addLinkClickEventToSetPlanValue("sign-up-free");
+  })();
+</script>

@@ -1,71 +1,11 @@
 ---
-
+import "../styles/graph-paper-bg.css";
 ---
 
 <div class="graph-paper-bg hero">
   <div
     class="hero-content max-w-2xl flex-col py-24 text-center lg:flex-row-reverse"
   >
-    <div>
-      <div
-        class="bg-gradient-to-r from-slate-200/60 to-slate-200 to-50% bg-clip-text text-3xl font-extrabold [text-wrap:balance] md:text-4xl"
-      >
-        <span
-          class="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]"
-        >
-          <ul
-            class="block animate-text-slide-reverse text-right leading-tight motion-reduce:animate-none [&_li]:block"
-          >
-            <li>Actionable</li>
-            <li>Efficient</li>
-            <li>Insightful</li>
-            <li aria-hidden="true">Actionable</li>
-          </ul>
-        </span>
-        <span
-          class="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-accent md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]"
-        >
-          <ul
-            class="block animate-text-slide text-left leading-tight motion-reduce:animate-none [&_li]:block"
-          >
-            <li>Discussions</li>
-            <li>Meetings</li>
-            <li>Brainstorms</li>
-            <li>Polls</li>
-            <li>Ideas</li>
-            <li aria-hidden="true">Discussions</li>
-          </ul>
-        </span>
-      </div>
-
-      <p class="py-6">
-        Bring the power of <span class="italic">asynchronous communication</span
-        > to your workplace. Have effective conversations in all work environments:
-        hybrid, in-person, and remote.
-      </p>
-      <button class="btn btn-accent btn-lg">Get started</button>
-    </div>
+    <slot />
   </div>
 </div>
-
-<style is:global>
-  .graph-paper-bg {
-    --line-color: oklch(var(--b2) / 0.4);
-    --paper-color: oklch(var(--b1));
-
-    background-image: linear-gradient(var(--line-color) 2px, transparent 2px),
-      linear-gradient(90deg, var(--line-color) 2px, transparent 2px),
-      linear-gradient(var(--line-color) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-color) 1px, var(--paper-color) 1px);
-    background-size:
-      100px 100px,
-      100px 100px,
-      20px 20px,
-      20px 20px;
-    background-position:
-      -2px -2px,
-      -2px -2px,
-      -1px -1px,
-      -1px -1px;
-  }
-</style>
