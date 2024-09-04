@@ -1,0 +1,123 @@
+---
+
+---
+
+<div id="business-details" aria-live="polite">
+  <div class="rounded bg-slate-100 p-6">
+    <h3 class="font-bold text-accent">Business</h3>
+    <div class="font-bold">
+      <span id="price" class="text-5xl"></span> /user per month
+    </div>
+  </div>
+  <ul class="list-inside list-disc px-4 py-8">
+    <li><span id="app-storage"></span> of application storage</li>
+    <li><span id="api-call-limit"></span> API calls</li>
+    <li>Create organizational teams</li>
+    <li>
+      <span id="team-app-storage"></span> of team application storage
+    </li>
+  </ul>
+  <div id="business-range-wrapper" class="pb-8"></div>
+</div>
+
+<script>
+  (() => {
+    const businessDetails = [
+      {
+        appStorage: "10 GB",
+        teamAppStorage: "10 GB",
+        apiCallLimit: "1M",
+        price: "$15",
+      },
+      {
+        appStorage: "20 GB",
+        teamAppStorage: "20 GB",
+        apiCallLimit: "2M",
+        price: "$20",
+      },
+      {
+        appStorage: "50 GB",
+        teamAppStorage: "50 GB",
+        apiCallLimit: "3M",
+        price: "$25",
+      },
+      {
+        appStorage: "100 GB",
+        teamAppStorage: "100 GB",
+        apiCallLimit: "5M",
+        price: "$30",
+      },
+    ];
+
+    const defaultIndex = "0";
+
+    const rangeWrapperElement = document.getElementById(
+      "business-range-wrapper",
+    );
+    if (!rangeWrapperElement) return;
+
+    // Range label
+    const rangeInputLabel = document.createElement("label");
+    rangeInputLabel.setAttribute("for", "business-range");
+    rangeInputLabel.className = "sr-only";
+    rangeInputLabel.textContent = "Select a Business plan tier";
+    rangeWrapperElement.appendChild(rangeInputLabel);
+
+    // Range input
+    const rangeInput = document.createElement("input");
+    rangeInput.id = "business-range";
+    rangeInput.setAttribute("aria-controls", "business-details");
+    rangeInput.type = "range";
+    rangeInput.min = "0";
+    rangeInput.max = (businessDetails.length - 1).toString();
+    rangeInput.value = defaultIndex;
+    rangeInput.className = "range range-accent";
+    rangeInput.step = "0";
+    rangeWrapperElement.appendChild(rangeInput);
+
+    const rangeElement = document.getElementById("business-range");
+    if (!rangeElement) return;
+
+    rangeElement.addEventListener("input", (event) => {
+      const rangeElement = event.target as HTMLInputElement;
+      setBusinessDetails(rangeElement.value);
+    });
+
+    // Set default values
+    setBusinessDetails(defaultIndex);
+
+    function setBusinessDetails(index: string): void {
+      const appStorageElement = document.getElementById("app-storage");
+      const apiCallLimitElement = document.getElementById("api-call-limit");
+      const teamAppStorageElement = document.getElementById("team-app-storage");
+      const priceElement = document.getElementById("price");
+      if (
+        !appStorageElement ||
+        !apiCallLimitElement ||
+        !teamAppStorageElement ||
+        !priceElement
+      )
+        return;
+
+      const { appStorage, apiCallLimit, teamAppStorage, price } =
+        businessDetails[parseInt(index)];
+
+      appStorageElement.textContent = appStorage;
+      apiCallLimitElement.textContent = apiCallLimit;
+      teamAppStorageElement.textContent = teamAppStorage;
+      priceElement.textContent = price;
+    }
+
+    // Do range labels
+    const labelsDiv = document.createElement("div");
+    labelsDiv.className = "flex w-full justify-between px-2 text-xs";
+
+    businessDetails.forEach(({ appStorage }) => {
+      const span = document.createElement("span");
+      span.textContent = appStorage;
+      labelsDiv.appendChild(span);
+    });
+
+    rangeWrapperElement.appendChild(labelsDiv);
+  })();
+</script>
