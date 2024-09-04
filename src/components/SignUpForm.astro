@@ -119,31 +119,159 @@
             </div>
           </div>
         </div>
-        <div>
-          <div class="sib-input sib-form-block">
-            <div class="form__entry entry_block">
-              <div class="form__label-row">
-                <div class="entry__field">
-                  {/* Value set by plan link click */}
-                  <input
-                    class="input"
-                    type="hidden"
-                    id="PLAN"
-                    name="PLAN"
-                    value="unspecified"
-                  />
+        <!-- plan -->
+        <fieldset
+          class="sib-radiobutton-group sib-form-block mb-4"
+          data-required="true"
+        >
+          <div class="form__entry entry_mcq">
+            <div
+              role="alert"
+              class="entry__error entry__error--primary text-error"
+            >
+            </div>
+            <div class="form__label-row">
+              <legend class="entry__label mb-1 font-bold" data-required="*"
+                >What plan are you interested in?</legend
+              >
+              <div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="PLAN"
+                      class="input_replaced"
+                      value="1"
+                      required
+                    />
+                    <span class="radio-button"></span><span>Business</span>
+                  </label>
+                </div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="PLAN"
+                      class="input_replaced"
+                      value="2"
+                      required
+                    />
+                    <span class="radio-button"></span><span>Enterprise</span>
+                  </label>
+                </div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="PLAN"
+                      class="input_replaced"
+                      value="3"
+                      required
+                    />
+                    <span class="radio-button"></span><span>Free</span>
+                  </label>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div
-            class="g-recaptcha-v3"
-            data-sitekey="6LfGuzIqAAAAAL0ZeCkpAJfH9WTvREo7e3JGdGA4"
-            style="display: none"
-          >
+        </fieldset>
+        <!-- team size -->
+        <fieldset
+          class="sib-radiobutton-group sib-form-block mb-4"
+          data-required="true"
+        >
+          <div class="form__entry entry_mcq">
+            <div
+              role="alert"
+              class="entry__error entry__error--primary text-error"
+            >
+            </div>
+            <div class="form__label-row">
+              <legend class="entry__label mb-1 font-bold" data-required="*"
+                >How big is your team?</legend
+              >
+              <div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="TEAM_SIZE"
+                      class="input_replaced"
+                      value="1"
+                      required
+                    />
+                    <span class="radio-button"></span><span>&lt; 10</span>
+                  </label>
+                </div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="TEAM_SIZE"
+                      class="input_replaced"
+                      value="2"
+                      required
+                    />
+                    <span class="radio-button"></span><span>10-49</span>
+                  </label>
+                </div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="TEAM_SIZE"
+                      class="input_replaced"
+                      value="3"
+                      required
+                    />
+                    <span class="radio-button"></span><span>50-150</span>
+                  </label>
+                </div>
+                <div class="entry__choice">
+                  <label>
+                    <input
+                      type="radio"
+                      name="TEAM_SIZE"
+                      class="input_replaced"
+                      value="4"
+                      required
+                    />
+                    <span class="radio-button"></span><span>&gt; 150</span>
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
+        </fieldset>
+        <!-- join the Discord server -->
+        <div class="sib-optin sib-form-block mb-4">
+          <div class="form__entry entry_mcq">
+            <div class="form__label-row">
+              <div class="form-control">
+                <label class="label cursor-pointer gap-4">
+                  <span class="entry__label label-text"
+                    >Add me to the Korero Discord server</span
+                  >
+                  <div class="entry__choice flex items-center">
+                    <input
+                      type="checkbox"
+                      class="checkbox-accent checkbox"
+                      value="1"
+                      id="JOIN_DISCORD"
+                      name="JOIN_DISCORD"
+                    />
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Recaptcha -->
+        <div
+          class="g-recaptcha-v3"
+          data-sitekey="6LfGuzIqAAAAAL0ZeCkpAJfH9WTvREo7e3JGdGA4"
+          style="display: none"
+        >
         </div>
         <div>
           <div class="sib-form-block">
@@ -196,7 +324,7 @@
       REQUIRED_ERROR_MESSAGE: string;
     }
   }
-  window.REQUIRED_ERROR_MESSAGE = "Email address cannot be left blank. ";
+  window.REQUIRED_ERROR_MESSAGE = "A value is required";
 </script>
 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
