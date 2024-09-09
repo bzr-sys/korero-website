@@ -14,7 +14,6 @@ import BusinessPlan from "./BusinessPlan.astro";
         href="#early-access"
         id="sign-up-business"
         class="btn btn-accent btn-block"
-        data-plan="business"
       >
         Sign up for early access
       </a>
@@ -40,7 +39,6 @@ import BusinessPlan from "./BusinessPlan.astro";
         href="#early-access"
         id="sign-up-enterprise"
         class="btn btn-outline btn-block"
-        data-plan="enterprise"
       >
         Talk to sales
       </a>
@@ -48,31 +46,8 @@ import BusinessPlan from "./BusinessPlan.astro";
   </div>
 
   <div class="py-6 text-center text-sm opacity-70">
-    <a href="#early-access" id="sign-up-free" class="link" data-plan="free"
+    <a href="#early-access" id="sign-up-free" class="link"
       >Or, try Korero with free Bazaar account.</a
     >
   </div>
 </div>
-
-<script>
-  (() => {
-    const planInput = document.getElementById("PLAN") as HTMLInputElement;
-    if (!planInput) return;
-
-    /**
-     * Link element must have a `data-plan` attribute
-     * @param linkId e.g. `sign-up-business`
-     */
-    function addLinkClickEventToSetPlanValue(linkId: string): void {
-      const link = document.getElementById(linkId);
-      if (link) {
-        link.addEventListener("click", () => {
-          planInput.value = link.dataset.plan || "";
-        });
-      }
-    }
-    addLinkClickEventToSetPlanValue("sign-up-business");
-    addLinkClickEventToSetPlanValue("sign-up-enterprise");
-    addLinkClickEventToSetPlanValue("sign-up-free");
-  })();
-</script>

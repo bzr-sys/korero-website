@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+import SingleColumnProse from "../components/SingleColumnProse.astro";
+
+interface Props {
+  title: string;
+  frontmatter?: {
+    title: string;
+  };
+}
+
+const { title, frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter?.title || title}>
+  <SingleColumnProse><slot /></SingleColumnProse>
+</BaseLayout>
