@@ -3,26 +3,30 @@ import FooterUl from "./FooterUl.astro";
 import LogoIconSVG from "./LogoIconSVG.astro";
 ---
 
-<footer class="footer mt-12 bg-base-200 p-10 text-base-content">
-  <nav>
-    <header class="footer-title">Legal</header>
-    <FooterUl>
-      <li><a href="/terms" class="link-hover link">Terms of Use</a></li>
-      <li><a href="/privacy" class="link-hover link">Privacy Policy</a></li>
-      <li>
-        <a href="/acceptable-use-policy" class="link-hover link"
-          >Acceptable Use Policy</a
-        >
-      </li>
-    </FooterUl>
-  </nav>
-</footer>
-
-<footer
-  class="footer border-t border-base-300 bg-base-200 px-10 py-4 text-base-content"
->
-  <aside class="grid-flow-col items-center">
-    <LogoIconSVG width="24px" />
-    <p><strong>Korero</strong> <br />Communicate effectively with your team.</p>
-  </aside>
+<footer>
+  <div class="footer mt-12 bg-base-200 p-10 text-base-content">
+    <nav>
+      <header class="footer-title">Legal</header>
+      <FooterUl>
+        <li><a href="/terms" class="link-hover link">Terms of Use</a></li>
+        <li><a href="/privacy" class="link-hover link">Privacy Policy</a></li>
+        <li>
+          <a href="/acceptable-use-policy" class="link-hover link"
+            >Acceptable Use Policy</a
+          >
+        </li>
+      </FooterUl>
+    </nav>
+  </div>
+  <div
+    class="footer border-t border-base-300 bg-base-200 px-10 py-4 text-base-content"
+  >
+    <aside class="grid-flow-col items-center">
+      <LogoIconSVG width="24px" />
+      <p>
+        <strong>Korero</strong>
+        <br />Communicate effectively with your team.
+      </p>
+    </aside>
+  </div>
 </footer>

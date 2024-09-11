@@ -325,6 +325,34 @@
     }
   }
   window.REQUIRED_ERROR_MESSAGE = "A value is required";
+
+  (() => {
+    /**
+     * These map to the Brevo PLAN contact attribute.
+     *
+     * In Brevo, go to Contacts > Settings > Contact attributes
+     * Then, see the PLAN attribute, click the cog icon to see the
+     * this mapping
+     */
+    const brevoPlanMap: { [key: string]: string } = {
+      "1": "business",
+      "2": "enterprise",
+      "3": "free",
+    };
+
+    const queryParams = new URLSearchParams(window.location.search);
+    const planQueryParam = queryParams.get("plan");
+
+    const planRadios = document.getElementsByName(
+      "PLAN",
+    ) as NodeListOf<HTMLFormElement>;
+
+    planRadios.forEach((radio) => {
+      if (brevoPlanMap[radio.value] === planQueryParam) {
+        radio.checked = true;
+      }
+    });
+  })();
 </script>
 
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
