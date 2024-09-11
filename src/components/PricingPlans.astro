@@ -2,7 +2,7 @@
 import BusinessPlan from "./BusinessPlan.astro";
 ---
 
-<div class="mx-auto max-w-5xl px-4 pt-24">
+<div class="mx-auto max-w-5xl px-4 py-24">
   <div class="pb-12 text-center">
     <h2 class="text-3xl font-bold">Pricing Plans</h2>
     <p>Explore flexible pricing that scales with your needs.</p>
@@ -11,7 +11,7 @@ import BusinessPlan from "./BusinessPlan.astro";
     <div class="card flex-col justify-between border p-4">
       <BusinessPlan />
       <a
-        href="#early-access"
+        href="/early-access?plan=business"
         id="sign-up-business"
         class="btn btn-accent btn-block"
       >
@@ -36,7 +36,7 @@ import BusinessPlan from "./BusinessPlan.astro";
         </ul>
       </div>
       <a
-        href="#early-access"
+        href="/early-access?plan=enterprise"
         id="sign-up-enterprise"
         class="btn btn-outline btn-block"
       >
@@ -46,8 +46,8 @@ import BusinessPlan from "./BusinessPlan.astro";
   </div>
 
   <div class="py-6 text-center text-sm opacity-70">
-    <a href="#early-access" id="sign-up-free" class="link"
-      >Or, try Korero with free Bazaar account.</a
+    <a href="/early-access?plan=free" id="sign-up-free" class="link"
+      >Or, try Korero with your free personal Bazaar account.</a
     >
   </div>
 </div>

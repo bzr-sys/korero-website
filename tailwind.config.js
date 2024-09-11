@@ -31,14 +31,17 @@ module.exports = {
           },
         },
         "text-slide-reverse": {
-          "0%, 26.66%": {
-            transform: "translateY(-75%)",
+          "0%, 20%": {
+            transform: "translateY(-80%)",
           },
-          "33.33%, 60%": {
-            transform: "translateY(-50%)",
+          "25%, 45%": {
+            transform: "translateY(-60%)",
           },
-          "66.66%, 93.33%": {
-            transform: "translateY(-25%)",
+          "50%, 70%": {
+            transform: "translateY(-40%)",
+          },
+          "75%, 95%": {
+            transform: "translateY(-20%)",
           },
           "100%": {
             transform: "translateY(0%)",
