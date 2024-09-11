@@ -1,6 +1,7 @@
 ---
 import NavBarEnd from "./NavBarEnd.astro";
 import LogoIconSVG from "./LogoIconSVG.astro";
+import LogoTextSVG from "./LogoTextSVG.astro";
 ---
 
 <header class="sticky top-0 z-10">
@@ -35,10 +36,12 @@ import LogoIconSVG from "./LogoIconSVG.astro";
       </div>
 
       <div class="ml-2 mr-4">
-        <a href={import.meta.env.BASE_URL} class="flex gap-3"
-          ><LogoIconSVG width="36px" />
-          <span class="text-lg font-bold">Korero</span></a
-        >
+        <a href={import.meta.env.BASE_URL} class="relative flex gap-3">
+          <LogoTextSVG width="130px" />
+          <span class="absolute bottom-0 right-0 translate-y-full text-[0.6rem]"
+            >Powered by Bazaar</span
+          >
+        </a>
       </div>
       <ul class="menu menu-horizontal hidden px-1 py-0 lg:flex">
         <li>
