@@ -10,12 +10,13 @@
     </div>
   </div>
   <ul class="list-inside list-disc px-4 py-8">
-    <li><span id="app-storage"></span> of application storage</li>
-    <li><span id="api-call-limit"></span> API calls</li>
-    <li>Create organizational teams</li>
+    <li>Create organization</li>
     <li>
-      <span id="team-app-storage"></span> of team application storage
+      <span id="team-app-storage"></span> of organizational storage
     </li>
+    <li><span id="app-storage"></span> of user storage</li>
+    <li><span id="api-call-limit"></span> API calls</li>
+    <li>Email support by development team</li>
   </ul>
   <div id="business-range-wrapper" class="pb-8"></div>
 </div>
@@ -33,26 +34,26 @@
         appStorage: "20 GB",
         teamAppStorage: "20 GB",
         apiCallLimit: "2M",
-        price: "$20",
+        price: "$25",
       },
       {
         appStorage: "50 GB",
         teamAppStorage: "50 GB",
         apiCallLimit: "3M",
-        price: "$25",
+        price: "$45",
       },
       {
         appStorage: "100 GB",
         teamAppStorage: "100 GB",
         apiCallLimit: "5M",
-        price: "$30",
+        price: "$85",
       },
     ];
 
     const defaultIndex = "0";
 
     const rangeWrapperElement = document.getElementById(
-      "business-range-wrapper",
+      "business-range-wrapper"
     );
     if (!rangeWrapperElement) return;
 

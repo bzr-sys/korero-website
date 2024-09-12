@@ -121,6 +121,7 @@
         </div>
         <!-- plan -->
         <fieldset
+          id="choose-plan"
           class="sib-radiobutton-group sib-form-block mb-4"
           data-required="true"
         >
@@ -348,13 +349,17 @@
     const queryParams = new URLSearchParams(window.location.search);
     const planQueryParam = queryParams.get("plan");
 
+    const choosePlan = document.getElementById("choose-plan");
     const planRadios = document.getElementsByName(
-      "PLAN",
+      "PLAN"
     ) as NodeListOf<HTMLFormElement>;
 
     planRadios.forEach((radio) => {
       if (brevoPlanMap[radio.value] === planQueryParam) {
         radio.checked = true;
+        if (choosePlan) {
+          choosePlan.style.display = "none";
+        }
       }
     });
   })();
