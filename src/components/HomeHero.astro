@@ -5,17 +5,18 @@ import Hero from "./Hero.astro";
 <Hero>
   <div>
     <div class="text-3xl font-extrabold [text-wrap:balance] md:text-4xl">
+      Have
       <div
         class="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]"
       >
         <ul
           class="block animate-text-slide-reverse text-right leading-tight motion-reduce:animate-none [&_li]:block"
         >
-          <li>Have Actionable</li>
-          <li>Have Efficient</li>
-          <li>Have Insightful</li>
-          <li>Have Organized</li>
-          <li aria-hidden="true">Have Actionable</li>
+          <li>Actionable</li>
+          <li>Efficient</li>
+          <li>Insightful</li>
+          <li>Organized</li>
+          <li aria-hidden="true">Actionable</li>
         </ul>
       </div>
       <div
@@ -32,18 +33,20 @@ import Hero from "./Hero.astro";
           <li aria-hidden="true">Discussions</li>
         </ul>
       </div>
-      <div>Instead of running in circles</div>
+      <div class="pt-2">Instead of running in circles</div>
     </div>
 
-    <p class="py-6">
-      Bring the power of <span class="italic">asynchronous communication</span> to
-      your workplace. Have effective conversations in all work environments: hybrid,
-      in-person, and remote.
+    <p class="py-10">
+      Bring the power of <span class="font-bold italic text-accent"
+        >asynchronous communication</span
+      > to your workplace. Have effective conversations in all work environments:
+      hybrid, in-person, and remote.
     </p>
     <a
       class="btn btn-accent btn-md md:btn-lg"
       href={import.meta.env.BASE_URL + "pricing/"}>Get started</a
     >
+    <div class="pt-2 text-xs">30% off for early access</div>
   </div>
 </Hero>
 
