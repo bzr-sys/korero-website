@@ -5,8 +5,14 @@
 <div id="business-details" aria-live="polite">
   <div class="rounded bg-slate-100 p-6">
     <h3 class="font-bold text-accent">Business</h3>
-    <div class="font-bold">
-      <span id="price" class="text-5xl"></span> /user per month
+    <div>
+      <span
+        id="price"
+        class="text-5xl line-through opacity-20"
+        aria-label="Full price"></span><span
+        id="discounted-price"
+        class="text-5xl font-bold text-success"
+        aria-label="Discounted price"></span> /user per month
     </div>
   </div>
   <ul class="list-inside list-disc px-4 py-8">
@@ -29,24 +35,28 @@
         teamAppStorage: "10 GB",
         apiCallLimit: "1M",
         price: "$15",
+        discountedPrice: "$6",
       },
       {
         appStorage: "20 GB",
         teamAppStorage: "20 GB",
         apiCallLimit: "2M",
         price: "$25",
+        discountedPrice: "$10",
       },
       {
         appStorage: "50 GB",
         teamAppStorage: "50 GB",
         apiCallLimit: "3M",
         price: "$45",
+        discountedPrice: "$18",
       },
       {
         appStorage: "100 GB",
         teamAppStorage: "100 GB",
         apiCallLimit: "5M",
         price: "$85",
+        discountedPrice: "$34",
       },
     ];
 
@@ -92,21 +102,30 @@
       const apiCallLimitElement = document.getElementById("api-call-limit");
       const teamAppStorageElement = document.getElementById("team-app-storage");
       const priceElement = document.getElementById("price");
+      const discountedPriceElement =
+        document.getElementById("discounted-price");
       if (
         !appStorageElement ||
         !apiCallLimitElement ||
         !teamAppStorageElement ||
-        !priceElement
+        !priceElement ||
+        !discountedPriceElement
       )
         return;
 
-      const { appStorage, apiCallLimit, teamAppStorage, price } =
-        businessDetails[parseInt(index)];
+      const {
+        appStorage,
+        apiCallLimit,
+        teamAppStorage,
+        price,
+        discountedPrice,
+      } = businessDetails[parseInt(index)];
 
       appStorageElement.textContent = appStorage;
       apiCallLimitElement.textContent = apiCallLimit;
       teamAppStorageElement.textContent = teamAppStorage;
       priceElement.textContent = price;
+      discountedPriceElement.textContent = discountedPrice;
     }
 
     // Do range labels
