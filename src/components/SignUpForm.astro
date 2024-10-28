@@ -362,6 +362,35 @@
         }
       }
     });
+
+    // Fire Google Ads conversion
+
+    const successPanel = document.getElementById("success-message");
+    if (!successPanel) return;
+
+    const successfulSignUpObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "class"
+        ) {
+          const successPanel = mutation.target as HTMLElement;
+          if (
+            successPanel.classList.contains("sib-form-message-panel--active")
+          ) {
+            // @ts-ignore
+            gtag("event", "conversion", {
+              send_to: "AW-640602160/9UVmCKmtu9ABELCgu7EC",
+            });
+          }
+        }
+      }
+    });
+
+    successfulSignUpObserver.observe(successPanel, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
   })();
 </script>
 
