@@ -52,6 +52,26 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["corporate"],
+    // Corporate with the Korero app's colors (korero/src/assets/main.css)
+    themes: [
+      {
+        korero: {
+          ...require("daisyui/src/theming/themes").corporate,
+          primary: "#111111",
+          "primary-content": "#ffffff",
+          secondary: "#80c9a3",
+          "secondary-content": "#10291c",
+          accent: "#2f7a5c",
+          "accent-content": "#ffffff",
+          neutral: "#1d2421",
+          "neutral-content": "#ffffff",
+          "base-200": "#f6f8f7",
+          "base-300": "#e3e8e6",
+          "base-content": "#1d2421",
+          success: "#2f7a5c",
+          "success-content": "#ffffff",
+        },
+      },
+    ],
   },
 };
