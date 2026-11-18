@@ -68,7 +68,7 @@ to Korero.
 4.1. Subject to the Terms, the Service is provided to you without charge up to
 certain limits. Usage over this limit requires your purchase of additional
 resources or services. The pricing for additional resources and services can be
-found [here](/pricing).
+found [here](https://bzr.dev/pricing).
 
 4.2. For all purchased resources and services, we will charge your credit card
 on a monthly basis or at the interval indicated in the Fees and Payment
