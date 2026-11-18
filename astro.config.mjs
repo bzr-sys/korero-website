@@ -7,6 +7,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://koreroapp.com",
   // Early access ended; Korero runs on any Bazaar org plan
-  redirects: { "/early-access": "/" },
+  redirects: { "/early-access": "/", "/pricing": "/" },
   integrations: [tailwind(), sitemap()],
 });
